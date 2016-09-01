@@ -1,0 +1,376 @@
+Script started on Thu 01 Sep 2016 03:42:48 PM CDT
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[?1034h[root@localhost cs161]# cd ~/cs161/src/kern/conf
+]0;root@localhost:~/cs161/src/kern/conf]7;file://localhost.localdomain/root/cs161/src/kern/conf[root@localhost conf]# ./config ASST0
+Configuration ASST0
+Generating files... opt-*.h files.mk defs.mk Makefile autoconf.h autoconf.c
+Configuration in ../compile/ASST0 done
+Remember to make depend
+]0;root@localhost:~/cs161/src/kern/conf]7;file://localhost.localdomain/root/cs161/src/kern/conf[root@localhost conf]# cd ..?[K/compile/a[KASSTO[K0
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make depend
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -M ../../dev/generic/console.c ../../dev/lamebus/emu.c ../../dev/lamebus/lser.c ../../dev/lamebus/lhd.c ../../dev/generic/pseudorand.c ../../dev/generic/random.c ../../dev/lamebus/ltimer.c ../../dev/lamebus/lamebus.c ../../dev/lamebus/lrandom.c ../../dev/generic/beep.c ../../dev/lamebus/ltrace.c ../../dev/generic/rtclock.c ../../dev/lamebus/ltimer_att.c ../../dev/lamebus/con_lser.c ../../dev/lamebus/lhd_att.c ../../dev/lamebus/random_lrandom.c ../../dev/lamebus/rtclock_ltimer.c ../../dev/lamebus/ltrace_att.c ../../dev/lamebus/lser_att.c ../../dev/lamebus/lrandom_att.c ../../dev/lamebus/emu_att.c ../../dev/lamebus/beep_ltimer.c ../../dev/generic/pseudorand_att.c ../../fs/sfs/sfs_vnode.c ../../fs/sfs/sfs_fs.c ../../arch/mips/mips/dumbvm.c ../../fs/sfs/sfs_io.c ../../arch/mips/mips/cache_mips1.S ../../arch/mips/mips/exception.S ../../arch/mips/mips/lamebus_mips.c ../../arch/mips/mips/interrupt.c ../../arch/mips/mips/pcb.c ../../arch/mips/mips/ram.c ../../arch/mips/mips/spl.c ../../arch/mips/mips/start.S ../../arch/mips/mips/switch.S ../../arch/mips/mips/syscall.c ../../arch/mips/mips/threadstart.S ../../arch/mips/mips/trap.c ../../arch/mips/mips/tlb_mips1.S ../../../lib/libc/mips-setjmp.S ../../lib/copyinout.c ../../lib/array.c ../../lib/bitmap.c ../../lib/queue.c ../../lib/kheap.c ../../lib/kprintf.c ../../lib/kgets.c ../../lib/misc.c ../../lib/ntoh.c ../../../lib/libc/__printf.c ../../../lib/libc/snprintf.c ../../../lib/libc/atoi.c ../../../lib/libc/bzero.c ../../../lib/libc/memcpy.c ../../../lib/libc/memmove.c ../../../lib/libc/strcat.c ../../../lib/libc/strchr.c ../../../lib/libc/strcmp.c ../../../lib/libc/strcpy.c ../../../lib/libc/strlen.c ../../../lib/libc/strrchr.c ../../../lib/libc/strtok_r.c ../../dev/init.c ../../fs/vfs/device.c ../../fs/vfs/vfscwd.c ../../fs/vfs/vfslist.c ../../fs/vfs/vfslookup.c ../../fs/vfs/vfspath.c ../../fs/vfs/vnode.c ../../fs/vfs/devnull.c ../../thread/hardclock.c ../../thread/synch.c ../../thread/scheduler.c ../../thread/thread.c ../../main/main.c ../../main/menu.c ../../main/hello.c ../../userprog/loadelf.c ../../userprog/runprogram.c ../../userprog/uio.c ../../test/arraytest.c ../../test/bitmaptest.c ../../test/queuetest.c ../../test/threadtest.c ../../test/tt3.c ../../test/synchtest.c ../../test/malloctest.c ../../test/fstest.c ../../compile/ASST0/autoconf.c > depend.mk
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../compile/ASST0/autoconf.c
+../../conf/newvers.sh ASST0
+*** This is ASST0 build #21 ***
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c vers.c
+cs161-ld   -nostdlib -Ttext 0x80001000 -T ../../arch/mips/conf/ldscript -G 0 console.o emu.o lser.o lhd.o pseudorand.o random.o ltimer.o lamebus.o lrandom.o beep.o ltrace.o rtclock.o ltimer_att.o con_lser.o lhd_att.o random_lrandom.o rtclock_ltimer.o ltrace_att.o lser_att.o lrandom_att.o emu_att.o beep_ltimer.o pseudorand_att.o sfs_vnode.o sfs_fs.o dumbvm.o sfs_io.o cache_mips1.o exception.o lamebus_mips.o interrupt.o pcb.o ram.o spl.o start.o switch.o syscall.o threadstart.o trap.o tlb_mips1.o mips-setjmp.o copyinout.o array.o bitmap.o queue.o kheap.o kprintf.o kgets.o misc.o ntoh.o __printf.o snprintf.o atoi.o bzero.o memcpy.o memmove.o strcat.o strchr.o strcmp.o strcpy.o strlen.o strrchr.o strtok_r.o init.o device.o vfscwd.o vfslist.o vfslookup.o vfspath.o vnode.o devnull.o hardclock.o synch.o scheduler.o thread.o main.o menu.o hello.o loadelf.o runprogram.o uio.o arraytest.o bitmaptest.o queuetest.o threadtest.o tt3.o synchtest.o malloctest.o fstest.o autoconf.o vers.o -o kernel
+cs161-size kernel
+   text	   data	    bss	    dec	    hex	filename
+ 160648	    448	   7668	 168764	  2933c	kernel
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make install
+[ -d /root/cs161/root ] || mkdir /root/cs161/root
+cp kernel /root/cs161/root/kernel-ASST0
+rm -f /root/cs161/root/kernel
+ln -s kernel-ASST0 /root/cs161/root/kernel
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# cd ~/cs161/root
+]0;root@localhost:~/cs161/root]7;file://localhost.localdomain/root/cs161/root[root@localhost root]# ./sys161/[K kerna[Kel
+sys161: System/161 release 1.14, compiled Aug 29 2016 19:34:44
+
+OS/161 base system version 1.10
+Copyright (c) 2000, 2001, 2002, 2003
+   President and Fellows of Harvard College.  All rights reserved.
+
+Put-your-group-name-here's system version 0 (ASST0 #21)
+
+Cpu is MIPS r2000/r3000
+1872k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+hardclock on ltimer0 (100 hz)
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lser0 at lamebus0
+con0 at lser0
+pseudorand0 (virtual)
+
+Hello World
+OS/161 kernel [? for menu]: p /sbin/poweroff <return>
+Operation took 0.000162800 seconds
+OS/161 kernel [? for menu]: Shutting down.
+The system is halted.
+sys161: 318276972 cycles (4359980k, 19u, 313916973i)
+sys161: 1928 irqs 6 exns 0r/0w disk 26r/680w console 8r/0w/3m emufs 0r/0w net
+sys161: Elapsed real time: 12.741176 seconds (24.9802 mhz)
+sys161: Elapsed virtual time: 12.731078880 seconds (25 mhz)
+]0;root@localhost:~/cs161/root]7;file://localhost.localdomain/root/cs161/root[root@localhost root]# cd[Kvs[K[K[Kcd //[K[K//.[K[K[K//[K[K[K..
+bash: cd..: command not found...
+]0;root@localhost:~/cs161/root]7;file://localhost.localdomain/root/cs161/root[root@localhost root]# cd.. ..[C
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# cd src
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# cd [K[K[Ks[Kcvc[Ks[K[K[Kvcs[K[K[Kcvs diff -c kern/main/main.c
+Index: kern/main/main.c
+===================================================================
+RCS file: /root/cs161/cvsroot/src/kern/main/main.c,v
+retrieving revision 1.1.1.1
+diff -c -r1.1.1.1 main.c
+*** kern/main/main.c	30 Aug 2016 00:52:40 -0000	1.1.1.1
+--- kern/main/main.c	1 Sep 2016 20:38:26 -0000
+***************
+*** 1,7 ****
+  /*
+   * Main.
+   */
+! 
+  #include <types.h>
+  #include <kern/errno.h>
+  #include <kern/unistd.h>
+--- 1,7 ----
+  /*
+   * Main.
+   */
+! //Bhanu Sharma
+  #include <types.h>
+  #include <kern/errno.h>
+  #include <kern/unistd.h>
+***************
+*** 16,21 ****
+--- 16,22 ----
+  #include <vm.h>
+  #include <syscall.h>
+  #include <version.h>
++ #include "hello.h"
+  
+  /*
+   * These two pieces of data are maintained by the makefiles and build system.
+***************
+*** 60,67 ****
+  	 * anything at all. You can make it larger though (it's in
+  	 * dev/generic/console.c).
+  	 */
+! 
+! 	kprintf("\n");
+  	kprintf("OS/161 base system version %s\n", BASE_VERSION);
+  	kprintf("%s", harvard_copyright);
+  	kprintf("\n");
+--- 61,69 ----
+  	 * anything at all. You can make it larger though (it's in
+  	 * dev/generic/console.c).
+  	 */
+!   
+! 	//hello();
+!         kprintf("\n");
+  	kprintf("OS/161 base system version %s\n", BASE_VERSION);
+  	kprintf("%s", harvard_copyright);
+  	kprintf("\n");
+***************
+*** 87,92 ****
+--- 89,96 ----
+  	 */
+  	assert(sizeof(userptr_t)==sizeof(char *));
+  	assert(sizeof(*(userptr_t)0)==sizeof(char));
++ 
++ 	
+  }
+  
+  /*
+***************
+*** 159,165 ****
+  kmain(char *arguments)
+  {
+  	boot();
+! 
+  	menu(arguments);
+  
+  	/* Should not get here */
+--- 163,169 ----
+  kmain(char *arguments)
+  {
+  	boot();
+! 	hello();
+  	menu(arguments);
+  
+  	/* Should not get here */
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# v[Kcvs commit
+cvs [commit aborted]: 'root' is not allowed to commit files
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# ls-al
+bash: ls-al: command not found...
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# ls-al[C -al[C
+total 88
+drwxr-xr-x. 11 root root  4096 Sep  1 14:49 [0m[38;5;27m.[0m
+drwxr-xr-x. 12 root root  4096 Sep  1 15:42 [38;5;27m..[0m
+drwxr-xr-x. 16 root root  4096 Aug 29 19:53 [38;5;27mbin[0m
+-rw-r--r--.  1 root root 16954 Aug 29 19:52 CHANGES
+-rwxr-xr-x.  1 root root 10407 Aug 29 19:52 [38;5;34mconfigure[0m
+-rw-r--r--.  1 root root  1713 Aug 29 19:52 COPYING
+drwxr-xr-x.  2 root root    48 Aug 29 19:53 [38;5;27mCVS[0m
+-rw-r--r--.  1 root root     8 Aug 29 19:52 .cvsignore
+-rw-r--r--.  1 root root  5215 Sep  1 14:49 defs.mk
+-rw-r--r--.  1 root root  5482 Aug 29 19:52 defs.mk.sample
+drwxr-xr-x.  4 root root  4096 Aug 29 19:53 [38;5;27minclude[0m
+drwxr-xr-x. 16 root root  4096 Aug 29 19:53 [38;5;27mkern[0m
+drwxr-xr-x.  6 root root    70 Aug 29 19:53 [38;5;27mlib[0m
+-rw-r--r--.  1 root root  1569 Aug 29 19:52 Makefile
+drwxr-xr-x. 11 root root  4096 Aug 29 19:53 [38;5;27mman[0m
+drwxr-xr-x.  3 root root    74 Aug 29 19:53 [38;5;27mmk[0m
+drwxr-xr-x.  8 root root    96 Aug 29 19:53 [38;5;27msbin[0m
+drwxr-xr-x. 40 root root  4096 Aug 29 19:53 [38;5;27mtestbin[0m
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# t[Kyum git i[K[K[K[K[K[K[K[K[Kcd .. [K
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# ls
+[0m[38;5;27mbin[0m                     [38;5;9mcs161-gdb-1.5.tgz[0m  [38;5;27mroot[0m
+[38;5;27mcs161-binutils-1.4[0m      [38;5;27mcvsroot[0m            [38;5;27msrc[0m
+[38;5;9mcs161-binutils-1.4.tar[0m  cvs-use.script     [38;5;27msys161-1.14[0m
+[38;5;27mcs161-gcc-1.5[0m           newbuild.script    [38;5;9msys161-1.14.tar.gz[0m
+[38;5;9mcs161-gcc-1.5.tgz[0m       [38;5;9mos161-1.10.tar.gz[0m  [38;5;27mtools[0m
+[38;5;27mcs161-gdb-1.5[0m           [38;5;27mproj[0m
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# cd ..
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# yum -y inst[Kts[Kall git[Kt
+Loaded plugins: fastestmirror, langpacks
+base                                                     | 3.6 kB     00:00     
+extras                                                   | 3.4 kB     00:00     
+updates                                                  | 3.4 kB     00:00     
+Loading mirror speeds from cached hostfile
+ * base: mirror.cogentco.com
+ * extras: mirror.math.princeton.edu
+ * updates: ftp.usf.edu
+Package git-1.8.3.1-6.el7_2.1.x86_64 already installed and latest version
+Nothing to do
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# git init [K[K[K[K[K[K[K[K[Kgit inti[Ki[K[Kit [K[K[K[K[K[K[K[K[Kcd[K[Kls
+anaconda-ks.cfg  file.gdbinit          questions2_3.script  [0m[38;5;34msimple[0m
+[38;5;27mcs161[0m            file.gdbinit~         questions2_4.script  simple.c
+[38;5;27mDesktop[0m          initial-setup-ks.cfg  questions.script     simple.c~
+[38;5;27mDownloads[0m        question2_1.script    questions.txt        sys161.conf
+file1.script     questions2_2.script   sample.script
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# cd cs161
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# [K[root@localhost cs161]# get i[K[K[K[K[Kcd ..
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# cd cs161
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git init [K
+Initialized empty Git repository in /root/cs161/.git/
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git remote add opro[K[K[Krihgin[K[K[K[Kgin git@github.com:bhanumad havsharma/operating_systems.git
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# i[Kgit pushj[K -u origin master
+\The authenticity of host 'github.com (192.30.253.112)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git remote[Ke add origin het[K[Kttps://github,[K.com/bhan umadhavshsrm[K[K[Karma/operating [K_syste[K[K[Ksy[Ktems.git
+fatal: remote origin already exists.
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git push [K[K[K[K[Kremote delete origin htt[K[K[K[K[Kn
+error: Unknown subcommand: delete
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags|--no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | -d | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git remove delete origin
+git: 'remove' is not a git command. See 'git --help'.
+
+Did you mean this?
+	remote
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git --help
+usage: git [--version] [--help] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git remote remove origin
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git remote add origin https://github.com/bhan umadhavsharma/operating_systems.git
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git push u[K-u origin master
+Username for 'https://github.com': bhanumadhavshs arma
+Password for 'https://bhanumadhavsharma@github.com': 
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/bhanumadhavsharma/operating_systems.git'
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git remote remove orig[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	bin/
+#	cs161-binutils-1.4.tar
+#	cs161-binutils-1.4/
+#	cs161-gcc-1.5.tgz
+#	cs161-gcc-1.5/
+#	cs161-gdb-1.5.tgz
+#	cs161-gdb-1.5/
+#	cvs-use.script
+#	cvsroot/
+#	newbuild.script
+#	os161-1.10.tar.gz
+#	proj/
+#	root/
+#	src/
+#	sys161-1.14.tar.gz
+#	sys161-1.14/
+#	tools/
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git add -A [K
+
+^Z
+[1]+  Stopped                 git add -A
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git add -all
+error: did you mean `--all` (with two dashes ?)
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git add --all
+fatal: Unable to create '/root/cs161/.git/index.lock': File exists.
+
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	bin/
+#	cs161-binutils-1.4.tar
+#	cs161-binutils-1.4/
+#	cs161-gcc-1.5.tgz
+#	cs161-gcc-1.5/
+#	cs161-gdb-1.5.tgz
+#	cs161-gdb-1.5/
+#	cvs-use.script
+#	cvsroot/
+#	newbuild.script
+#	os161-1.10.tar.gz
+#	proj/
+#	root/
+#	src/
+#	sys161-1.14.tar.gz
+#	sys161-1.14/
+#	tools/
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# git add -all[K[K[K-all
+fatal: Unable to create '/root/cs161/.git/index.lock': File exists.
+
+If no other git process is currently running, this probably means a
+git process crashed in this repository earlier. Make sure no other git
+process is running and remove the file manually to continue.
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# ps [K[K[Kjobs
+[1]+  Stopped                 git add -A
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# ps [K
+  PID TTY          TIME CMD
+12825 pts/1    00:00:00 bash
+13663 pts/1    00:00:11 git
+13716 pts/1    00:00:00 ps
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# kill 13663
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# jobs
+[1]+  Stopped                 git add -A
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# ps kill 13663
+error: unknown sort specifier
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# ps --hel[K[K[K[K[K[K[K[Kkill --help
+bash: kill: -help: invalid signal specification
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# p[Kjob[K[K[Kkill `jobs -ps`
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# jobs
+[1]+  Stopped                 git add -A
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# exit
+exit
+
+Script done on Thu 01 Sep 2016 04:20:12 PM CDT

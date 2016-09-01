@@ -1,0 +1,2064 @@
+Script started on Tue 30 Aug 2016 01:56:04 PM CDT
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[?1034h[root@localhost cs161]# cd s[K[K[K[Kls
+[0m[38;5;27mbin[0m                     [38;5;9mcs161-gdb-1.5.tgz[0m  [38;5;27msys161-1.14[0m
+[38;5;27mcs161-binutils-1.4[0m      [38;5;27mcvsroot[0m            [38;5;9msys161-1.14.tar.gz[0m
+[38;5;9mcs161-binutils-1.4.tar[0m  [38;5;9mos161-1.10.tar.gz[0m  [38;5;27mtools[0m
+[38;5;27mcs161-gcc-1.5[0m           [38;5;27mproj[0m               typescript.script
+[38;5;9mcs161-gcc-1.5.tgz[0m       [38;5;27mroot[0m
+[38;5;27mcs161-gdb-1.5[0m           [38;5;27msrc[0m
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# cd src
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# ./configure
+Checking for ranlib... yes
+Checking for <err.h>... yes
+Generating defs.mk.
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# cd k[K[K[K[Kls
+[0m[38;5;27mbin[0m        COPYING  defs.mk.sample  [38;5;27mlib[0m       [38;5;27mmk[0m
+CHANGES    [38;5;27mCVS[0m      [38;5;27minclude[0m         Makefile  [38;5;27msbin[0m
+[38;5;34mconfigure[0m  defs.mk  [38;5;27mkern[0m            [38;5;27mman[0m       [38;5;27mtestbin[0m
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# cd kern
+]0;root@localhost:~/cs161/src/kern]7;file://localhost.localdomain/root/cs161/src/kern[root@localhost kern]# ;s[K[Kls
+[0m[38;5;27march[0m   [38;5;27mcompile[0m  [38;5;27mCVS[0m  [38;5;27mfs[0m       [38;5;27mlib[0m   Makefile  [38;5;27mthread[0m    [38;5;27mvm[0m
+[38;5;27masst1[0m  [38;5;27mconf[0m     [38;5;27mdev[0m  [38;5;27minclude[0m  [38;5;27mmain[0m  [38;5;27mtest[0m      [38;5;27muserprog[0m
+]0;root@localhost:~/cs161/src/kern]7;file://localhost.localdomain/root/cs161/src/kern[root@localhost kern]# cd conf
+]0;root@localhost:~/cs161/src/kern/conf]7;file://localhost.localdomain/root/cs161/src/kern/conf[root@localhost conf]# .config[K[K[K[K[K[K[K./config ASST0
+Configuration ASST0
+Generating files... opt-*.h files.mk defs.mk Makefile autoconf.h autoconf.c
+Configuration in ../compile/ASST0 done
+Remember to make depend
+]0;root@localhost:~/cs161/src/kern/conf]7;file://localhost.localdomain/root/cs161/src/kern/conf[root@localhost conf]# cd ../cin[K[Kompile/ASST0
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# ls
+autoconf.c  depend.mk  Makefile      opt-net.h
+autoconf.h  files.mk   opt-dumbvm.h  opt-sfs.h
+defs.mk     [0m[38;5;51mmachine[0m    opt-netfs.h   opt-synchprobs.h
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make depend
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -M ../../dev/generic/console.c ../../dev/lamebus/emu.c ../../dev/lamebus/lser.c ../../dev/lamebus/lhd.c ../../dev/generic/pseudorand.c ../../dev/generic/random.c ../../dev/lamebus/ltimer.c ../../dev/lamebus/lamebus.c ../../dev/lamebus/lrandom.c ../../dev/generic/beep.c ../../dev/lamebus/ltrace.c ../../dev/generic/rtclock.c ../../dev/lamebus/ltimer_att.c ../../dev/lamebus/con_lser.c ../../dev/lamebus/lhd_att.c ../../dev/lamebus/random_lrandom.c ../../dev/lamebus/rtclock_ltimer.c ../../dev/lamebus/ltrace_att.c ../../dev/lamebus/lser_att.c ../../dev/lamebus/lrandom_att.c ../../dev/lamebus/emu_att.c ../../dev/lamebus/beep_ltimer.c ../../dev/generic/pseudorand_att.c ../../fs/sfs/sfs_vnode.c ../../fs/sfs/sfs_fs.c ../../arch/mips/mips/dumbvm.c ../../fs/sfs/sfs_io.c ../../arch/mips/mips/cache_mips1.S ../../arch/mips/mips/exception.S ../../arch/mips/mips/lamebus_mips.c ../../arch/mips/mips/interrupt.c ../../arch/mips/mips/pcb.c ../../arch/mips/mips/ram.c ../../arch/mips/mips/spl.c ../../arch/mips/mips/start.S ../../arch/mips/mips/switch.S ../../arch/mips/mips/syscall.c ../../arch/mips/mips/threadstart.S ../../arch/mips/mips/trap.c ../../arch/mips/mips/tlb_mips1.S ../../../lib/libc/mips-setjmp.S ../../lib/copyinout.c ../../lib/array.c ../../lib/bitmap.c ../../lib/queue.c ../../lib/kheap.c ../../lib/kprintf.c ../../lib/kgets.c ../../lib/misc.c ../../lib/ntoh.c ../../../lib/libc/__printf.c ../../../lib/libc/snprintf.c ../../../lib/libc/atoi.c ../../../lib/libc/bzero.c ../../../lib/libc/memcpy.c ../../../lib/libc/memmove.c ../../../lib/libc/strcat.c ../../../lib/libc/strchr.c ../../../lib/libc/strcmp.c ../../../lib/libc/strcpy.c ../../../lib/libc/strlen.c ../../../lib/libc/strrchr.c ../../../lib/libc/strtok_r.c ../../dev/init.c ../../fs/vfs/device.c ../../fs/vfs/vfscwd.c ../../fs/vfs/vfslist.c ../../fs/vfs/vfslookup.c ../../fs/vfs/vfspath.c ../../fs/vfs/vnode.c ../../fs/vfs/devnull.c ../../thread/hardclock.c ../../thread/synch.c ../../thread/scheduler.c ../../thread/thread.c ../../main/main.c ../../main/menu.c ../../userprog/loadelf.c ../../userprog/runprogram.c ../../userprog/uio.c ../../test/arraytest.c ../../test/bitmaptest.c ../../test/queuetest.c ../../test/threadtest.c ../../test/tt3.c ../../test/synchtest.c ../../test/malloctest.c ../../test/fstest.c ../../compile/ASST0/autoconf.c > depend.mk
+/bin/sh: cs161-gcc: command not found
+make: *** [depend] Error 127
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make.dep[K[K[K[K depend.mk
+make: Nothing to be done for `depend.mk'.
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/generic/console.c
+make: cs161-gcc: Command not found
+make: *** [console.o] Error 127
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# cd ..
+]0;root@localhost:~/cs161/src/kern/compile]7;file://localhost.localdomain/root/cs161/src/kern/compile[root@localhost compile]# cd ..
+]0;root@localhost:~/cs161/src/kern]7;file://localhost.localdomain/root/cs161/src/kern[root@localhost kern]# cd ...[K
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# cd ![Kroot
+bash: cd: root: No such file or directory
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# cd ~/
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# ls
+anaconda-ks.cfg  initial-setup-ks.cfg  sample.script
+[0m[38;5;27mcs161[0m            question2_1.script    [38;5;34msimple[0m
+[38;5;27mDesktop[0m          questions2_2.script   simple.c
+[38;5;27mDownloads[0m        questions2_3.script   simple.c~
+file1.script     questions2_4.script   sys161.conf
+file.gdbinit     questions.script
+file.gdbinit~    questions.txt
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# yum install gcc gcc-c++ kernel [K-devel
+Loaded plugins: fastestmirror, langpacks
+base                                          | 3.6 kB     00:00     
+extras                                        | 3.4 kB     00:00     
+updates                                       | 3.4 kB     00:00     
+Loading mirror speeds from cached hostfile
+ * base: ftp.linux.ncsu.edu
+ * extras: mirror.math.princeton.edu
+ * updates: ftp.linux.ncsu.edu
+Package gcc-4.8.5-4.el7.x86_64 already installed and latest version
+Package gcc-c++-4.8.5-4.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package kernel-devel.x86_64 0:3.10.0-327.28.3.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=====================================================================
+ Package         Arch      Version                  Repository  Size
+=====================================================================
+Installing:
+ kernel-devel    x86_64    3.10.0-327.28.3.el7      updates     11 M
+
+Transaction Summary
+=====================================================================
+Install  1 Package
+
+Total download size: 11 M
+Installed size: 33 M
+Is this ok [y/d/N]: y
+Downloading packages:
+updates/7/x86_64/prestodelta                    | 698 kB   00:00     
+kernel-devel-3.10.0-3 9% [=          ]  0.0 B/s | 1.0 MB   --:-- ETA kernel-devel-3.10.0- 21% [==         ] 1.5 MB/s | 2.4 MB   00:05 ETA kernel-devel-3.10.0- 53% [=====-     ] 2.1 MB/s | 5.9 MB   00:02 ETA kernel-devel-3.10.0- 85% [=========  ] 2.7 MB/s | 9.4 MB   00:00 ETA kernel-devel-3.10.0-327.28.3.el7.x86_64.rpm     |  11 MB   00:01     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : kernel-devel-3.10.0-327 [                       ] 1/1  Installing : kernel-devel-3.10.0-327 [#                      ] 1/1  Installing : kernel-devel-3.10.0-327 [##                     ] 1/1  Installing : kernel-devel-3.10.0-327 [###                    ] 1/1  Installing : kernel-devel-3.10.0-327 [####                   ] 1/1  Installing : kernel-devel-3.10.0-327 [#####                  ] 1/1  Installing : kernel-devel-3.10.0-327 [######                 ] 1/1  Installing : kernel-devel-3.10.0-327 [#######                ] 1/1  Installing : kernel-devel-3.10.0-327 [########               ] 1/1  Installing : kernel-devel-3.10.0-327 [#########              ] 1/1  Installing : kernel-devel-3.10.0-327 [##########             ] 1/1  Installing : kernel-devel-3.10.0-327 [###########            ] 1/1  Installing : kernel-devel-3.10.0-327 [############           ] 1/1  Installing : kernel-devel-3.10.0-327 [#############          ] 1/1  Installing : kernel-devel-3.10.0-327 [##############         ] 1/1  Installing : kernel-devel-3.10.0-327 [###############        ] 1/1  Installing : kernel-devel-3.10.0-327 [################       ] 1/1  Installing : kernel-devel-3.10.0-327 [#################      ] 1/1  Installing : kernel-devel-3.10.0-327 [##################     ] 1/1  Installing : kernel-devel-3.10.0-327 [###################    ] 1/1  Installing : kernel-devel-3.10.0-327 [####################   ] 1/1  Installing : kernel-devel-3.10.0-327 [#####################  ] 1/1  Installing : kernel-devel-3.10.0-327 [###################### ] 1/1  Installing : kernel-devel-3.10.0-327.28.3.el7.x86_64           1/1 
+  Verifying  : kernel-devel-3.10.0-327.28.3.el7.x86_64           1/1 
+
+Installed:
+  kernel-devel.x86_64 0:3.10.0-327.28.3.el7                          
+
+Complete!
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# yum groupsi[K[Kinstall "Deve;p[[K[K[Klopment Tools"
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: ftp.linux.ncsu.edu
+ * extras: mirror.math.princeton.edu
+ * updates: ftp.linux.ncsu.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package autoconf.noarch 0:2.69-11.el7 will be installed
+--> Processing Dependency: m4 >= 1.4.14 for package: autoconf-2.69-11.el7.noarch
+--> Processing Dependency: perl(Data::Dumper) for package: autoconf-2.69-11.el7.noarch
+---> Package automake.noarch 0:1.13.4-3.el7 will be installed
+--> Processing Dependency: perl(Thread::Queue) for package: automake-1.13.4-3.el7.noarch
+--> Processing Dependency: perl(TAP::Parser) for package: automake-1.13.4-3.el7.noarch
+---> Package bison.x86_64 0:2.7-4.el7 will be installed
+---> Package byacc.x86_64 0:1.9.20130304-3.el7 will be installed
+---> Package cscope.x86_64 0:15.8-7.el7 will be installed
+---> Package ctags.x86_64 0:5.8-13.el7 will be installed
+---> Package diffstat.x86_64 0:1.57-4.el7 will be installed
+---> Package doxygen.x86_64 1:1.8.5-3.el7 will be installed
+---> Package flex.x86_64 0:2.5.37-3.el7 will be installed
+---> Package gcc-gfortran.x86_64 0:4.8.5-4.el7 will be installed
+--> Processing Dependency: libquadmath-devel = 4.8.5-4.el7 for package: gcc-gfortran-4.8.5-4.el7.x86_64
+---> Package git.x86_64 0:1.8.3.1-6.el7_2.1 will be installed
+--> Processing Dependency: perl-Git = 1.8.3.1-6.el7_2.1 for package: git-1.8.3.1-6.el7_2.1.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-1.8.3.1-6.el7_2.1.x86_64
+--> Processing Dependency: perl(Git) for package: git-1.8.3.1-6.el7_2.1.x86_64
+--> Processing Dependency: perl(Error) for package: git-1.8.3.1-6.el7_2.1.x86_64
+---> Package indent.x86_64 0:2.2.11-13.el7 will be installed
+---> Package intltool.noarch 0:0.50.2-6.el7 will be installed
+--> Processing Dependency: perl(XML::Parser) for package: intltool-0.50.2-6.el7.noarch
+--> Processing Dependency: gettext-devel for package: intltool-0.50.2-6.el7.noarch
+---> Package libtool.x86_64 0:2.4.2-21.el7_2 will be installed
+---> Package patch.x86_64 0:2.7.1-8.el7 will be installed
+---> Package patchutils.x86_64 0:0.3.3-4.el7 will be installed
+---> Package rcs.x86_64 0:5.9.0-5.el7 will be installed
+---> Package redhat-rpm-config.noarch 0:9.1.0-68.el7.centos will be installed
+--> Processing Dependency: dwz >= 0.4 for package: redhat-rpm-config-9.1.0-68.el7.centos.noarch
+--> Processing Dependency: perl-srpm-macros for package: redhat-rpm-config-9.1.0-68.el7.centos.noarch
+---> Package rpm-build.x86_64 0:4.11.3-17.el7 will be installed
+---> Package rpm-sign.x86_64 0:4.11.3-17.el7 will be installed
+---> Package subversion.x86_64 0:1.7.14-10.el7 will be installed
+--> Processing Dependency: subversion-libs(x86-64) = 1.7.14-10.el7 for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_wc-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_subr-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_repos-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_ra_svn-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_ra_neon-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_ra_local-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_ra-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_fs_util-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_fs_fs-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_fs_base-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_fs-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_diff-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_delta-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libsvn_client-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libaprutil-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+--> Processing Dependency: libapr-1.so.0()(64bit) for package: subversion-1.7.14-10.el7.x86_64
+---> Package swig.x86_64 0:2.0.10-4.el7 will be installed
+---> Package systemtap.x86_64 0:2.8-10.el7 will be installed
+--> Processing Dependency: systemtap-devel = 2.8-10.el7 for package: systemtap-2.8-10.el7.x86_64
+--> Processing Dependency: systemtap-client = 2.8-10.el7 for package: systemtap-2.8-10.el7.x86_64
+--> Running transaction check
+---> Package apr.x86_64 0:1.4.8-3.el7 will be installed
+---> Package apr-util.x86_64 0:1.5.2-6.el7 will be installed
+---> Package dwz.x86_64 0:0.11-3.el7 will be installed
+---> Package gettext-devel.x86_64 0:0.18.2.1-4.el7 will be installed
+--> Processing Dependency: gettext-common-devel = 0.18.2.1-4.el7 for package: gettext-devel-0.18.2.1-4.el7.x86_64
+---> Package libquadmath-devel.x86_64 0:4.8.5-4.el7 will be installed
+---> Package m4.x86_64 0:1.4.16-10.el7 will be installed
+---> Package perl-Data-Dumper.x86_64 0:2.145-3.el7 will be installed
+---> Package perl-Error.noarch 1:0.17020-2.el7 will be installed
+---> Package perl-Git.noarch 0:1.8.3.1-6.el7_2.1 will be installed
+---> Package perl-TermReadKey.x86_64 0:2.30-20.el7 will be installed
+---> Package perl-Test-Harness.noarch 0:3.28-3.el7 will be installed
+---> Package perl-Thread-Queue.noarch 0:3.02-2.el7 will be installed
+---> Package perl-XML-Parser.x86_64 0:2.41-10.el7 will be installed
+---> Package perl-srpm-macros.noarch 0:1-8.el7 will be installed
+---> Package subversion-libs.x86_64 0:1.7.14-10.el7 will be installed
+---> Package systemtap-client.x86_64 0:2.8-10.el7 will be installed
+--> Processing Dependency: mokutil for package: systemtap-client-2.8-10.el7.x86_64
+---> Package systemtap-devel.x86_64 0:2.8-10.el7 will be installed
+--> Running transaction check
+---> Package gettext-common-devel.noarch 0:0.18.2.1-4.el7 will be installed
+---> Package mokutil.x86_64 0:0.9-2.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=====================================================================
+ Package               Arch    Version                Repository
+                                                                Size
+=====================================================================
+Installing for group install "Development Tools":
+ autoconf              noarch  2.69-11.el7            base     701 k
+ automake              noarch  1.13.4-3.el7           base     679 k
+ bison                 x86_64  2.7-4.el7              base     578 k
+ byacc                 x86_64  1.9.20130304-3.el7     base      65 k
+ cscope                x86_64  15.8-7.el7             base     203 k
+ ctags                 x86_64  5.8-13.el7             base     155 k
+ diffstat              x86_64  1.57-4.el7             base      35 k
+ doxygen               x86_64  1:1.8.5-3.el7          base     3.6 M
+ flex                  x86_64  2.5.37-3.el7           base     292 k
+ gcc-gfortran          x86_64  4.8.5-4.el7            base     6.6 M
+ git                   x86_64  1.8.3.1-6.el7_2.1      updates  4.4 M
+ indent                x86_64  2.2.11-13.el7          base     150 k
+ intltool              noarch  0.50.2-6.el7           base      59 k
+ libtool               x86_64  2.4.2-21.el7_2         updates  588 k
+ patch                 x86_64  2.7.1-8.el7            base     110 k
+ patchutils            x86_64  0.3.3-4.el7            base     104 k
+ rcs                   x86_64  5.9.0-5.el7            base     230 k
+ redhat-rpm-config     noarch  9.1.0-68.el7.centos    base      77 k
+ rpm-build             x86_64  4.11.3-17.el7          base     143 k
+ rpm-sign              x86_64  4.11.3-17.el7          base      44 k
+ subversion            x86_64  1.7.14-10.el7          base     1.0 M
+ swig                  x86_64  2.0.10-4.el7           base     1.3 M
+ systemtap             x86_64  2.8-10.el7             base      25 k
+Installing for dependencies:
+ apr                   x86_64  1.4.8-3.el7            base     103 k
+ apr-util              x86_64  1.5.2-6.el7            base      92 k
+ dwz                   x86_64  0.11-3.el7             base      99 k
+ gettext-common-devel  noarch  0.18.2.1-4.el7         base     368 k
+ gettext-devel         x86_64  0.18.2.1-4.el7         base     315 k
+ libquadmath-devel     x86_64  4.8.5-4.el7            base      46 k
+ m4                    x86_64  1.4.16-10.el7          base     256 k
+ mokutil               x86_64  0.9-2.el7              base      37 k
+ perl-Data-Dumper      x86_64  2.145-3.el7            base      47 k
+ perl-Error            noarch  1:0.17020-2.el7        base      32 k
+ perl-Git              noarch  1.8.3.1-6.el7_2.1      updates   53 k
+ perl-TermReadKey      x86_64  2.30-20.el7            base      31 k
+ perl-Test-Harness     noarch  3.28-3.el7             base     302 k
+ perl-Thread-Queue     noarch  3.02-2.el7             base      17 k
+ perl-XML-Parser       x86_64  2.41-10.el7            base     223 k
+ perl-srpm-macros      noarch  1-8.el7                base     4.6 k
+ subversion-libs       x86_64  1.7.14-10.el7          base     921 k
+ systemtap-client      x86_64  2.8-10.el7             base     2.9 M
+ systemtap-devel       x86_64  2.8-10.el7             base     1.6 M
+
+Transaction Summary
+=====================================================================
+Install  23 Packages (+19 Dependent packages)
+
+Total download size: 28 M
+Installed size: 96 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/42): apr-util-1.5.2-6.el7.x86_64.rpm         |  92 kB   00:00     
+(2/42): apr-1.4.8-3.el7.x86_64.rpm              | 103 kB   00:00     
+(4/42): automake-1.13 2% [           ]  0.0 B/s | 738 kB   --:-- ETA (3/42): autoconf-2.69-11.el7.noarch.rpm         | 701 kB   00:00     
+(4/42): automake-1.13.4-3.el7.noarch.rpm        | 679 kB   00:00     
+(5/42): byacc-1.9.20130304-3.el7.x86_64.rpm     |  65 kB   00:00     
+(6/42): bison-2.7-4.el7.x86_64.rpm              | 578 kB   00:00     
+(7/42): cscope-15.8-7.el7.x86_64.rpm            | 203 kB   00:00     
+(8/42): diffstat-1.57-4.el7.x86_64.rpm          |  35 kB   00:00     
+(10/42): doxygen-1.8. 8% [-          ] 1.6 MB/s | 2.5 MB   00:16 ETA (9/42): ctags-5.8-13.el7.x86_64.rpm             | 155 kB   00:00     
+(10/42): dwz-0.11-3.el7.x86_64.rpm              |  99 kB   00:00     
+(11/42): doxygen-1.8.5-3.el7.x86_64.rpm         | 3.6 MB   00:00     
+(12/42): flex-2.5.37-3.el7.x86_64.rpm           | 292 kB   00:00     
+(13/42): gcc-gfortra 29% [===        ] 2.6 MB/s | 8.5 MB   00:07 ETA (13/42): gettext-common-devel-0.18.2.1-4.el7.no | 368 kB   00:00     
+(14/42): gettext-devel-0.18.2.1-4.el7.x86_64.rp | 315 kB   00:00     
+(15/42): gcc-gfortra 39% [====       ] 3.0 MB/s |  11 MB   00:05 ETA (15/42): indent-2.2.11-13.el7.x86_64.rpm        | 150 kB   00:00     
+(16/42): intltool-0.50.2-6.el7.noarch.rpm       |  59 kB   00:00     
+(17/42): libquadmath-devel-4.8.5-4.el7.x86_64.r |  46 kB   00:00     
+(18/42): gcc-gfortra 50% [=====-     ] 3.4 MB/s |  14 MB   00:04 ETA (18/42): m4-1.4.16-10.el7.x86_64.rpm            | 256 kB   00:00     
+(19/42): mokutil-0.9-2.el7.x86_64.rpm           |  37 kB   00:00     
+(20/42): gcc-gfortra 59% [======-    ] 3.7 MB/s |  17 MB   00:03 ETA (20/42): libtool-2.4.2-21.el7_2.x86_64.rpm      | 588 kB   00:00     
+(21/42): patch-2.7.1-8.el7.x86_64.rpm           | 110 kB   00:00     
+(22/42): git-1.8.3.1-6.el7_2.1.x86_64.rpm       | 4.4 MB   00:01     
+(23/42): patchutils-0.3.3-4.el7.x86_64.rpm      | 104 kB   00:00     
+(24/42): gcc-gfortran-4.8.5-4.el7.x86_64.rpm    | 6.6 MB   00:01     
+(25/42): perl-Data-Dumper-2.145-3.el7.x86_64.rp |  47 kB   00:00     
+(26/42): perl-Error-0.17020-2.el7.noarch.rpm    |  32 kB   00:00     
+(27/42): perl-TermReadKey-2.30-20.el7.x86_64.rp |  31 kB   00:00     
+(28/42): perl-Thread-Queue-3.02-2.el7.noarch.rp |  17 kB   00:00     
+(29/42): perl-Test-Harness-3.28-3.el7.noarch.rp | 302 kB   00:00     
+(30/42): perl-srpm-macros-1-8.el7.noarch.rpm    | 4.6 kB   00:00     
+(31/42): perl-Git-1.8.3.1-6.el7_2.1.noarch.rpm  |  53 kB   00:00     
+(32/42): perl-XML-Parser-2.41-10.el7.x86_64.rpm | 223 kB   00:00     
+(33/42): rcs-5.9.0-5.el7.x86_64.rpm             | 230 kB   00:00     
+(34/42): redhat-rpm-config-9.1.0-68.el7.centos. |  77 kB   00:00     
+(35/42): rpm-build-4.11.3-17.el7.x86_64.rpm     | 143 kB   00:00     
+(36/42): rpm-sign-4.11.3-17.el7.x86_64.rpm      |  44 kB   00:00     
+(37/42): subversion-1.7.14-10.el7.x86_64.rpm    | 1.0 MB   00:00     
+(39/42): swig-2.0.10 78% [========-  ] 4.1 MB/s |  22 MB   00:01 ETA (38/42): subversion-libs-1.7.14-10.el7.x86_64.r | 921 kB   00:00     
+(39/42): systemtap-2.8-10.el7.x86_64.rpm        |  25 kB   00:00     
+(41/42): systemtap-c 83% [=========  ] 4.2 MB/s |  24 MB   00:01 ETA (40/42): swig-2.0.10-4.el7.x86_64.rpm           | 1.3 MB   00:00     
+(42/42): systemtap-d 91% [========== ] 4.3 MB/s |  26 MB   00:00 ETA (41/42): systemtap-devel-2.8-10.el7.x86_64.rpm  | 1.6 MB   00:00     
+(42/42): systemtap-client-2.8-10.el7.x86_64.rpm | 2.9 MB   00:00     
+---------------------------------------------------------------------
+Total                                   6.1 MB/s |  28 MB  00:04     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : m4-1.4.16-10.el7.x86_6 [                      ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [##                    ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [#####                 ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [######                ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [#######               ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [##########            ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [#############         ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [###############       ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [################      ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [#################     ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [####################  ]  1/42  Installing : m4-1.4.16-10.el7.x86_6 [##################### ]  1/42  Installing : m4-1.4.16-10.el7.x86_64                          1/42 
+  Installing : apr-1.4.8-3.el7.x86_64 [                      ]  2/42  Installing : apr-1.4.8-3.el7.x86_64 [######                ]  2/42  Installing : apr-1.4.8-3.el7.x86_64 [############          ]  2/42  Installing : apr-1.4.8-3.el7.x86_64 [##################    ]  2/42  Installing : apr-1.4.8-3.el7.x86_64 [###################   ]  2/42  Installing : apr-1.4.8-3.el7.x86_64 [####################  ]  2/42  Installing : apr-1.4.8-3.el7.x86_64 [##################### ]  2/42  Installing : apr-1.4.8-3.el7.x86_64                           2/42 
+  Installing : apr-util-1.5.2-6.el7.x [                      ]  3/42  Installing : apr-util-1.5.2-6.el7.x [#######               ]  3/42  Installing : apr-util-1.5.2-6.el7.x [##############        ]  3/42  Installing : apr-util-1.5.2-6.el7.x [##################    ]  3/42  Installing : apr-util-1.5.2-6.el7.x [###################   ]  3/42  Installing : apr-util-1.5.2-6.el7.x [##################### ]  3/42  Installing : apr-util-1.5.2-6.el7.x86_64                      3/42 
+  Installing : 1:perl-Error-0.17020-2 [                      ]  4/42  Installing : 1:perl-Error-0.17020-2 [###                   ]  4/42  Installing : 1:perl-Error-0.17020-2 [#####                 ]  4/42  Installing : 1:perl-Error-0.17020-2 [######                ]  4/42  Installing : 1:perl-Error-0.17020-2 [#######               ]  4/42  Installing : 1:perl-Error-0.17020-2 [#########             ]  4/42  Installing : 1:perl-Error-0.17020-2 [##########            ]  4/42  Installing : 1:perl-Error-0.17020-2 [###########           ]  4/42  Installing : 1:perl-Error-0.17020-2 [##################### ]  4/42  Installing : 1:perl-Error-0.17020-2.el7.noarch                4/42 
+  Installing : patch-2.7.1-8.el7.x86_ [                      ]  5/42  Installing : patch-2.7.1-8.el7.x86_ [######                ]  5/42  Installing : patch-2.7.1-8.el7.x86_ [#############         ]  5/42  Installing : patch-2.7.1-8.el7.x86_ [###############       ]  5/42  Installing : patch-2.7.1-8.el7.x86_ [##################    ]  5/42  Installing : patch-2.7.1-8.el7.x86_ [####################  ]  5/42  Installing : patch-2.7.1-8.el7.x86_ [##################### ]  5/42  Installing : patch-2.7.1-8.el7.x86_64                         5/42 
+  Installing : systemtap-devel-2.8-10 [                      ]  6/42  Installing : systemtap-devel-2.8-10 [#                     ]  6/42  Installing : systemtap-devel-2.8-10 [##                    ]  6/42  Installing : systemtap-devel-2.8-10 [###                   ]  6/42  Installing : systemtap-devel-2.8-10 [####                  ]  6/42  Installing : systemtap-devel-2.8-10 [#####                 ]  6/42  Installing : systemtap-devel-2.8-10 [######                ]  6/42  Installing : systemtap-devel-2.8-10 [#######               ]  6/42  Installing : systemtap-devel-2.8-10 [########              ]  6/42  Installing : systemtap-devel-2.8-10 [#########             ]  6/42  Installing : systemtap-devel-2.8-10 [##########            ]  6/42  Installing : systemtap-devel-2.8-10 [###########           ]  6/42  Installing : systemtap-devel-2.8-10 [############          ]  6/42  Installing : systemtap-devel-2.8-10 [#############         ]  6/42  Installing : systemtap-devel-2.8-10 [##############        ]  6/42  Installing : systemtap-devel-2.8-10 [###############       ]  6/42  Installing : systemtap-devel-2.8-10 [################      ]  6/42  Installing : systemtap-devel-2.8-10 [#################     ]  6/42  Installing : systemtap-devel-2.8-10 [##################    ]  6/42  Installing : systemtap-devel-2.8-10 [###################   ]  6/42  Installing : systemtap-devel-2.8-10 [####################  ]  6/42  Installing : systemtap-devel-2.8-10 [##################### ]  6/42  Installing : systemtap-devel-2.8-10.el7.x86_64                6/42 
+  Installing : perl-Thread-Queue-3.02 [                      ]  7/42  Installing : perl-Thread-Queue-3.02 [#                     ]  7/42  Installing : perl-Thread-Queue-3.02 [####                  ]  7/42  Installing : perl-Thread-Queue-3.02 [#####                 ]  7/42  Installing : perl-Thread-Queue-3.02 [#########             ]  7/42  Installing : perl-Thread-Queue-3.02 [##################### ]  7/42  Installing : perl-Thread-Queue-3.02-2.el7.noarch              7/42 
+  Installing : subversion-libs-1.7.14 [                      ]  8/42  Installing : subversion-libs-1.7.14 [#                     ]  8/42  Installing : subversion-libs-1.7.14 [##                    ]  8/42  Installing : subversion-libs-1.7.14 [###                   ]  8/42  Installing : subversion-libs-1.7.14 [####                  ]  8/42  Installing : subversion-libs-1.7.14 [#####                 ]  8/42  Installing : subversion-libs-1.7.14 [######                ]  8/42  Installing : subversion-libs-1.7.14 [#######               ]  8/42  Installing : subversion-libs-1.7.14 [########              ]  8/42  Installing : subversion-libs-1.7.14 [#########             ]  8/42  Installing : subversion-libs-1.7.14 [##########            ]  8/42  Installing : subversion-libs-1.7.14 [###########           ]  8/42  Installing : subversion-libs-1.7.14 [############          ]  8/42  Installing : subversion-libs-1.7.14 [#############         ]  8/42  Installing : subversion-libs-1.7.14 [##############        ]  8/42  Installing : subversion-libs-1.7.14 [###############       ]  8/42  Installing : subversion-libs-1.7.14 [################      ]  8/42  Installing : subversion-libs-1.7.14 [#################     ]  8/42  Installing : subversion-libs-1.7.14 [##################    ]  8/42  Installing : subversion-libs-1.7.14 [###################   ]  8/42  Installing : subversion-libs-1.7.14 [####################  ]  8/42  Installing : subversion-libs-1.7.14 [##################### ]  8/42  Installing : subversion-libs-1.7.14-10.el7.x86_64             8/42 
+  Installing : perl-srpm-macros-1-8.e [                      ]  9/42  Installing : perl-srpm-macros-1-8.e [###################   ]  9/42  Installing : perl-srpm-macros-1-8.el7.noarch                  9/42 
+  Installing : dwz-0.11-3.el7.x86_64 [                       ] 10/42  Installing : dwz-0.11-3.el7.x86_64 [######                 ] 10/42  Installing : dwz-0.11-3.el7.x86_64 [#############          ] 10/42  Installing : dwz-0.11-3.el7.x86_64 [################       ] 10/42  Installing : dwz-0.11-3.el7.x86_64 [##################     ] 10/42  Installing : dwz-0.11-3.el7.x86_64 [###################    ] 10/42  Installing : dwz-0.11-3.el7.x86_64 [###################### ] 10/42  Installing : dwz-0.11-3.el7.x86_64                           10/42 
+  Installing : redhat-rpm-config-9.1. [                      ] 11/42  Installing : redhat-rpm-config-9.1. [#                     ] 11/42  Installing : redhat-rpm-config-9.1. [#######               ] 11/42  Installing : redhat-rpm-config-9.1. [###########           ] 11/42  Installing : redhat-rpm-config-9.1. [############          ] 11/42  Installing : redhat-rpm-config-9.1. [#############         ] 11/42  Installing : redhat-rpm-config-9.1. [##############        ] 11/42  Installing : redhat-rpm-config-9.1. [###############       ] 11/42  Installing : redhat-rpm-config-9.1. [################      ] 11/42  Installing : redhat-rpm-config-9.1. [#################     ] 11/42  Installing : redhat-rpm-config-9.1. [##################### ] 11/42  Installing : redhat-rpm-config-9.1.0-68.el7.centos.noarch    11/42 
+  Installing : perl-Data-Dumper-2.145 [                      ] 12/42  Installing : perl-Data-Dumper-2.145 [#########             ] 12/42  Installing : perl-Data-Dumper-2.145 [#################     ] 12/42  Installing : perl-Data-Dumper-2.145 [###################   ] 12/42  Installing : perl-Data-Dumper-2.145 [##################### ] 12/42  Installing : perl-Data-Dumper-2.145-3.el7.x86_64             12/42 
+  Installing : autoconf-2.69-11.el7.n [                      ] 13/42  Installing : autoconf-2.69-11.el7.n [#                     ] 13/42  Installing : autoconf-2.69-11.el7.n [##                    ] 13/42  Installing : autoconf-2.69-11.el7.n [###                   ] 13/42  Installing : autoconf-2.69-11.el7.n [####                  ] 13/42  Installing : autoconf-2.69-11.el7.n [#####                 ] 13/42  Installing : autoconf-2.69-11.el7.n [######                ] 13/42  Installing : autoconf-2.69-11.el7.n [#######               ] 13/42  Installing : autoconf-2.69-11.el7.n [########              ] 13/42  Installing : autoconf-2.69-11.el7.n [#########             ] 13/42  Installing : autoconf-2.69-11.el7.n [##########            ] 13/42  Installing : autoconf-2.69-11.el7.n [###########           ] 13/42  Installing : autoconf-2.69-11.el7.n [############          ] 13/42  Installing : autoconf-2.69-11.el7.n [#############         ] 13/42  Installing : autoconf-2.69-11.el7.n [##############        ] 13/42  Installing : autoconf-2.69-11.el7.n [###############       ] 13/42  Installing : autoconf-2.69-11.el7.n [################      ] 13/42  Installing : autoconf-2.69-11.el7.n [#################     ] 13/42  Installing : autoconf-2.69-11.el7.n [##################    ] 13/42  Installing : autoconf-2.69-11.el7.n [###################   ] 13/42  Installing : autoconf-2.69-11.el7.n [####################  ] 13/42  Installing : autoconf-2.69-11.el7.n [##################### ] 13/42  Installing : autoconf-2.69-11.el7.noarch                     13/42 
+  Installing : libquadmath-devel-4.8. [                      ] 14/42  Installing : libquadmath-devel-4.8. [##########            ] 14/42  Installing : libquadmath-devel-4.8. [##############        ] 14/42  Installing : libquadmath-devel-4.8. [##################### ] 14/42  Installing : libquadmath-devel-4.8.5-4.el7.x86_64            14/42 
+  Installing : gettext-common-devel-0 [                      ] 15/42  Installing : gettext-common-devel-0 [###                   ] 15/42  Installing : gettext-common-devel-0 [#######               ] 15/42  Installing : gettext-common-devel-0 [############          ] 15/42  Installing : gettext-common-devel-0 [################      ] 15/42  Installing : gettext-common-devel-0 [####################  ] 15/42  Installing : gettext-common-devel-0 [##################### ] 15/42  Installing : gettext-common-devel-0.18.2.1-4.el7.noarch      15/42 
+  Installing : perl-Test-Harness-3.28 [                      ] 16/42  Installing : perl-Test-Harness-3.28 [#                     ] 16/42  Installing : perl-Test-Harness-3.28 [##                    ] 16/42  Installing : perl-Test-Harness-3.28 [###                   ] 16/42  Installing : perl-Test-Harness-3.28 [####                  ] 16/42  Installing : perl-Test-Harness-3.28 [#####                 ] 16/42  Installing : perl-Test-Harness-3.28 [######                ] 16/42  Installing : perl-Test-Harness-3.28 [#######               ] 16/42  Installing : perl-Test-Harness-3.28 [########              ] 16/42  Installing : perl-Test-Harness-3.28 [#########             ] 16/42  Installing : perl-Test-Harness-3.28 [##########            ] 16/42  Installing : perl-Test-Harness-3.28 [###########           ] 16/42  Installing : perl-Test-Harness-3.28 [############          ] 16/42  Installing : perl-Test-Harness-3.28 [#############         ] 16/42  Installing : perl-Test-Harness-3.28 [##############        ] 16/42  Installing : perl-Test-Harness-3.28 [###############       ] 16/42  Installing : perl-Test-Harness-3.28 [################      ] 16/42  Installing : perl-Test-Harness-3.28 [#################     ] 16/42  Installing : perl-Test-Harness-3.28 [##################    ] 16/42  Installing : perl-Test-Harness-3.28 [###################   ] 16/42  Installing : perl-Test-Harness-3.28 [####################  ] 16/42  Installing : perl-Test-Harness-3.28 [##################### ] 16/42  Installing : perl-Test-Harness-3.28-3.el7.noarch             16/42 
+  Installing : automake-1.13.4-3.el7. [                      ] 17/42  Installing : automake-1.13.4-3.el7. [#                     ] 17/42  Installing : automake-1.13.4-3.el7. [##                    ] 17/42  Installing : automake-1.13.4-3.el7. [###                   ] 17/42  Installing : automake-1.13.4-3.el7. [####                  ] 17/42  Installing : automake-1.13.4-3.el7. [#####                 ] 17/42  Installing : automake-1.13.4-3.el7. [######                ] 17/42  Installing : automake-1.13.4-3.el7. [#######               ] 17/42  Installing : automake-1.13.4-3.el7. [########              ] 17/42  Installing : automake-1.13.4-3.el7. [#########             ] 17/42  Installing : automake-1.13.4-3.el7. [##########            ] 17/42  Installing : automake-1.13.4-3.el7. [###########           ] 17/42  Installing : automake-1.13.4-3.el7. [############          ] 17/42  Installing : automake-1.13.4-3.el7. [#############         ] 17/42  Installing : automake-1.13.4-3.el7. [##############        ] 17/42  Installing : automake-1.13.4-3.el7. [###############       ] 17/42  Installing : automake-1.13.4-3.el7. [################      ] 17/42  Installing : automake-1.13.4-3.el7. [#################     ] 17/42  Installing : automake-1.13.4-3.el7. [##################    ] 17/42  Installing : automake-1.13.4-3.el7. [###################   ] 17/42  Installing : automake-1.13.4-3.el7. [####################  ] 17/42  Installing : automake-1.13.4-3.el7. [##################### ] 17/42  Installing : automake-1.13.4-3.el7.noarch                    17/42 
+  Installing : perl-TermReadKey-2.30- [                      ] 18/42  Installing : perl-TermReadKey-2.30- [#####                 ] 18/42  Installing : perl-TermReadKey-2.30- [#################     ] 18/42  Installing : perl-TermReadKey-2.30- [####################  ] 18/42  Installing : perl-TermReadKey-2.30- [##################### ] 18/42  Installing : perl-TermReadKey-2.30-20.el7.x86_64             18/42 
+  Installing : perl-Git-1.8.3.1-6.el7 [                      ] 19/42  Installing : perl-Git-1.8.3.1-6.el7 [###                   ] 19/42  Installing : perl-Git-1.8.3.1-6.el7 [####                  ] 19/42  Installing : perl-Git-1.8.3.1-6.el7 [####################  ] 19/42  Installing : perl-Git-1.8.3.1-6.el7 [##################### ] 19/42  Installing : perl-Git-1.8.3.1-6.el7_2.1.noarch               19/42 
+  Installing : git-1.8.3.1-6.el7_2.1. [                      ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [#                     ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [##                    ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [###                   ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [####                  ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [#####                 ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [######                ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [#######               ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [########              ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [#########             ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [##########            ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [###########           ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [############          ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [#############         ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [##############        ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [###############       ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [################      ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [#################     ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [##################    ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [###################   ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [####################  ] 20/42  Installing : git-1.8.3.1-6.el7_2.1. [##################### ] 20/42  Installing : git-1.8.3.1-6.el7_2.1.x86_64                    20/42 
+  Installing : gettext-devel-0.18.2.1 [                      ] 21/42  Installing : gettext-devel-0.18.2.1 [#                     ] 21/42  Installing : gettext-devel-0.18.2.1 [##                    ] 21/42  Installing : gettext-devel-0.18.2.1 [###                   ] 21/42  Installing : gettext-devel-0.18.2.1 [####                  ] 21/42  Installing : gettext-devel-0.18.2.1 [#####                 ] 21/42  Installing : gettext-devel-0.18.2.1 [######                ] 21/42  Installing : gettext-devel-0.18.2.1 [#######               ] 21/42  Installing : gettext-devel-0.18.2.1 [########              ] 21/42  Installing : gettext-devel-0.18.2.1 [#########             ] 21/42  Installing : gettext-devel-0.18.2.1 [##########            ] 21/42  Installing : gettext-devel-0.18.2.1 [###########           ] 21/42  Installing : gettext-devel-0.18.2.1 [############          ] 21/42  Installing : gettext-devel-0.18.2.1 [#############         ] 21/42  Installing : gettext-devel-0.18.2.1 [##############        ] 21/42  Installing : gettext-devel-0.18.2.1 [###############       ] 21/42  Installing : gettext-devel-0.18.2.1 [################      ] 21/42  Installing : gettext-devel-0.18.2.1 [#################     ] 21/42  Installing : gettext-devel-0.18.2.1 [##################    ] 21/42  Installing : gettext-devel-0.18.2.1 [###################   ] 21/42  Installing : gettext-devel-0.18.2.1 [####################  ] 21/42  Installing : gettext-devel-0.18.2.1 [##################### ] 21/42  Installing : gettext-devel-0.18.2.1-4.el7.x86_64             21/42 
+  Installing : mokutil-0.9-2.el7.x86_ [                      ] 22/42  Installing : mokutil-0.9-2.el7.x86_ [###########           ] 22/42  Installing : mokutil-0.9-2.el7.x86_ [##################### ] 22/42  Installing : mokutil-0.9-2.el7.x86_64                        22/42 
+  Installing : systemtap-client-2.8-1 [                      ] 23/42  Installing : systemtap-client-2.8-1 [######                ] 23/42  Installing : systemtap-client-2.8-1 [#######               ] 23/42  Installing : systemtap-client-2.8-1 [########              ] 23/42  Installing : systemtap-client-2.8-1 [#########             ] 23/42  Installing : systemtap-client-2.8-1 [##########            ] 23/42  Installing : systemtap-client-2.8-1 [###########           ] 23/42  Installing : systemtap-client-2.8-1 [############          ] 23/42  Installing : systemtap-client-2.8-1 [#############         ] 23/42  Installing : systemtap-client-2.8-1 [##############        ] 23/42  Installing : systemtap-client-2.8-1 [###############       ] 23/42  Installing : systemtap-client-2.8-1 [################      ] 23/42  Installing : systemtap-client-2.8-1 [#################     ] 23/42  Installing : systemtap-client-2.8-1 [##################    ] 23/42  Installing : systemtap-client-2.8-1 [###################   ] 23/42  Installing : systemtap-client-2.8-1 [####################  ] 23/42  Installing : systemtap-client-2.8-1 [##################### ] 23/42  Installing : systemtap-client-2.8-10.el7.x86_64              23/42 
+  Installing : perl-XML-Parser-2.41-1 [                      ] 24/42  Installing : perl-XML-Parser-2.41-1 [#                     ] 24/42  Installing : perl-XML-Parser-2.41-1 [##                    ] 24/42  Installing : perl-XML-Parser-2.41-1 [###                   ] 24/42  Installing : perl-XML-Parser-2.41-1 [####                  ] 24/42  Installing : perl-XML-Parser-2.41-1 [#####                 ] 24/42  Installing : perl-XML-Parser-2.41-1 [#######               ] 24/42  Installing : perl-XML-Parser-2.41-1 [########              ] 24/42  Installing : perl-XML-Parser-2.41-1 [#########             ] 24/42  Installing : perl-XML-Parser-2.41-1 [##########            ] 24/42  Installing : perl-XML-Parser-2.41-1 [###########           ] 24/42  Installing : perl-XML-Parser-2.41-1 [#############         ] 24/42  Installing : perl-XML-Parser-2.41-1 [##############        ] 24/42  Installing : perl-XML-Parser-2.41-1 [#################     ] 24/42  Installing : perl-XML-Parser-2.41-1 [###################   ] 24/42  Installing : perl-XML-Parser-2.41-1 [####################  ] 24/42  Installing : perl-XML-Parser-2.41-1 [##################### ] 24/42  Installing : perl-XML-Parser-2.41-10.el7.x86_64              24/42 
+  Installing : intltool-0.50.2-6.el7. [                      ] 25/42  Installing : intltool-0.50.2-6.el7. [###                   ] 25/42  Installing : intltool-0.50.2-6.el7. [########              ] 25/42  Installing : intltool-0.50.2-6.el7. [#########             ] 25/42  Installing : intltool-0.50.2-6.el7. [##############        ] 25/42  Installing : intltool-0.50.2-6.el7. [###############       ] 25/42  Installing : intltool-0.50.2-6.el7. [################      ] 25/42  Installing : intltool-0.50.2-6.el7. [###################   ] 25/42  Installing : intltool-0.50.2-6.el7. [####################  ] 25/42  Installing : intltool-0.50.2-6.el7. [##################### ] 25/42  Installing : intltool-0.50.2-6.el7.noarch                    25/42 
+  Installing : systemtap-2.8-10.el7.x [                      ] 26/42  Installing : systemtap-2.8-10.el7.x [###                   ] 26/42  Installing : systemtap-2.8-10.el7.x [##################### ] 26/42  Installing : systemtap-2.8-10.el7.x86_64                     26/42 
+  Installing : libtool-2.4.2-21.el7_2 [                      ] 27/42  Installing : libtool-2.4.2-21.el7_2 [#                     ] 27/42  Installing : libtool-2.4.2-21.el7_2 [##                    ] 27/42  Installing : libtool-2.4.2-21.el7_2 [###                   ] 27/42  Installing : libtool-2.4.2-21.el7_2 [####                  ] 27/42  Installing : libtool-2.4.2-21.el7_2 [#####                 ] 27/42  Installing : libtool-2.4.2-21.el7_2 [######                ] 27/42  Installing : libtool-2.4.2-21.el7_2 [#######               ] 27/42  Installing : libtool-2.4.2-21.el7_2 [########              ] 27/42  Installing : libtool-2.4.2-21.el7_2 [#########             ] 27/42  Installing : libtool-2.4.2-21.el7_2 [##########            ] 27/42  Installing : libtool-2.4.2-21.el7_2 [###########           ] 27/42  Installing : libtool-2.4.2-21.el7_2 [############          ] 27/42  Installing : libtool-2.4.2-21.el7_2 [#############         ] 27/42  Installing : libtool-2.4.2-21.el7_2 [##############        ] 27/42  Installing : libtool-2.4.2-21.el7_2 [###############       ] 27/42  Installing : libtool-2.4.2-21.el7_2 [################      ] 27/42  Installing : libtool-2.4.2-21.el7_2 [#################     ] 27/42  Installing : libtool-2.4.2-21.el7_2 [##################    ] 27/42  Installing : libtool-2.4.2-21.el7_2 [###################   ] 27/42  Installing : libtool-2.4.2-21.el7_2 [####################  ] 27/42  Installing : libtool-2.4.2-21.el7_2 [##################### ] 27/42  Installing : libtool-2.4.2-21.el7_2.x86_64                   27/42 
+  Installing : gcc-gfortran-4.8.5-4.e [                      ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [#                     ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [##                    ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [###                   ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [####                  ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [#####                 ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [######                ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [#######               ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [########              ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [#########             ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [##########            ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [###########           ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [############          ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [#############         ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [##############        ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [###############       ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [################      ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [#################     ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [##################    ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [###################   ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [####################  ] 28/42  Installing : gcc-gfortran-4.8.5-4.e [##################### ] 28/42  Installing : gcc-gfortran-4.8.5-4.el7.x86_64                 28/42 
+  Installing : rpm-build-4.11.3-17.el [                      ] 29/42  Installing : rpm-build-4.11.3-17.el [#                     ] 29/42  Installing : rpm-build-4.11.3-17.el [##                    ] 29/42  Installing : rpm-build-4.11.3-17.el [###                   ] 29/42  Installing : rpm-build-4.11.3-17.el [#######               ] 29/42  Installing : rpm-build-4.11.3-17.el [#########             ] 29/42  Installing : rpm-build-4.11.3-17.el [###########           ] 29/42  Installing : rpm-build-4.11.3-17.el [############          ] 29/42  Installing : rpm-build-4.11.3-17.el [#############         ] 29/42  Installing : rpm-build-4.11.3-17.el [##############        ] 29/42  Installing : rpm-build-4.11.3-17.el [###############       ] 29/42  Installing : rpm-build-4.11.3-17.el [################      ] 29/42  Installing : rpm-build-4.11.3-17.el [#################     ] 29/42  Installing : rpm-build-4.11.3-17.el [###################   ] 29/42  Installing : rpm-build-4.11.3-17.el [####################  ] 29/42  Installing : rpm-build-4.11.3-17.el [##################### ] 29/42  Installing : rpm-build-4.11.3-17.el7.x86_64                  29/42 
+  Installing : subversion-1.7.14-10.e [                      ] 30/42  Installing : subversion-1.7.14-10.e [#                     ] 30/42  Installing : subversion-1.7.14-10.e [##                    ] 30/42  Installing : subversion-1.7.14-10.e [###                   ] 30/42  Installing : subversion-1.7.14-10.e [####                  ] 30/42  Installing : subversion-1.7.14-10.e [#####                 ] 30/42  Installing : subversion-1.7.14-10.e [######                ] 30/42  Installing : subversion-1.7.14-10.e [#######               ] 30/42  Installing : subversion-1.7.14-10.e [########              ] 30/42  Installing : subversion-1.7.14-10.e [#########             ] 30/42  Installing : subversion-1.7.14-10.e [##########            ] 30/42  Installing : subversion-1.7.14-10.e [###########           ] 30/42  Installing : subversion-1.7.14-10.e [############          ] 30/42  Installing : subversion-1.7.14-10.e [#############         ] 30/42  Installing : subversion-1.7.14-10.e [##############        ] 30/42  Installing : subversion-1.7.14-10.e [###############       ] 30/42  Installing : subversion-1.7.14-10.e [################      ] 30/42  Installing : subversion-1.7.14-10.e [#################     ] 30/42  Installing : subversion-1.7.14-10.e [##################    ] 30/42  Installing : subversion-1.7.14-10.e [###################   ] 30/42  Installing : subversion-1.7.14-10.e [####################  ] 30/42  Installing : subversion-1.7.14-10.e [##################### ] 30/42  Installing : subversion-1.7.14-10.el7.x86_64                 30/42 
+  Installing : bison-2.7-4.el7.x86_64 [                      ] 31/42  Installing : bison-2.7-4.el7.x86_64 [#                     ] 31/42  Installing : bison-2.7-4.el7.x86_64 [##                    ] 31/42  Installing : bison-2.7-4.el7.x86_64 [###                   ] 31/42  Installing : bison-2.7-4.el7.x86_64 [####                  ] 31/42  Installing : bison-2.7-4.el7.x86_64 [#####                 ] 31/42  Installing : bison-2.7-4.el7.x86_64 [######                ] 31/42  Installing : bison-2.7-4.el7.x86_64 [#######               ] 31/42  Installing : bison-2.7-4.el7.x86_64 [########              ] 31/42  Installing : bison-2.7-4.el7.x86_64 [#########             ] 31/42  Installing : bison-2.7-4.el7.x86_64 [##########            ] 31/42  Installing : bison-2.7-4.el7.x86_64 [###########           ] 31/42  Installing : bison-2.7-4.el7.x86_64 [############          ] 31/42  Installing : bison-2.7-4.el7.x86_64 [#############         ] 31/42  Installing : bison-2.7-4.el7.x86_64 [##############        ] 31/42  Installing : bison-2.7-4.el7.x86_64 [###############       ] 31/42  Installing : bison-2.7-4.el7.x86_64 [################      ] 31/42  Installing : bison-2.7-4.el7.x86_64 [#################     ] 31/42  Installing : bison-2.7-4.el7.x86_64 [##################    ] 31/42  Installing : bison-2.7-4.el7.x86_64 [###################   ] 31/42  Installing : bison-2.7-4.el7.x86_64 [####################  ] 31/42  Installing : bison-2.7-4.el7.x86_64 [##################### ] 31/42  Installing : bison-2.7-4.el7.x86_64                          31/42 
+  Installing : flex-2.5.37-3.el7.x86_ [                      ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [#                     ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [###                   ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [#####                 ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [#######               ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [#########             ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [##########            ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [############          ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [#############         ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [##############        ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [###############       ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [################      ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [#################     ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [##################    ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [###################   ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [####################  ] 32/42  Installing : flex-2.5.37-3.el7.x86_ [##################### ] 32/42  Installing : flex-2.5.37-3.el7.x86_64                        32/42 
+  Installing : swig-2.0.10-4.el7.x86_ [                      ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [#                     ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [##                    ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [###                   ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [####                  ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [#####                 ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [######                ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [#######               ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [########              ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [#########             ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [##########            ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [###########           ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [############          ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [#############         ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [##############        ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [###############       ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [################      ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [#################     ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [##################    ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [###################   ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [####################  ] 33/42  Installing : swig-2.0.10-4.el7.x86_ [##################### ] 33/42  Installing : swig-2.0.10-4.el7.x86_64                        33/42 
+  Installing : diffstat-1.57-4.el7.x8 [                      ] 34/42  Installing : diffstat-1.57-4.el7.x8 [##############        ] 34/42  Installing : diffstat-1.57-4.el7.x8 [###################   ] 34/42  Installing : diffstat-1.57-4.el7.x8 [####################  ] 34/42  Installing : diffstat-1.57-4.el7.x8 [##################### ] 34/42  Installing : diffstat-1.57-4.el7.x86_64                      34/42 
+  Installing : patchutils-0.3.3-4.el7 [                      ] 35/42  Installing : patchutils-0.3.3-4.el7 [####                  ] 35/42  Installing : patchutils-0.3.3-4.el7 [########              ] 35/42  Installing : patchutils-0.3.3-4.el7 [###########           ] 35/42  Installing : patchutils-0.3.3-4.el7 [############          ] 35/42  Installing : patchutils-0.3.3-4.el7 [##############        ] 35/42  Installing : patchutils-0.3.3-4.el7 [###################   ] 35/42  Installing : patchutils-0.3.3-4.el7 [####################  ] 35/42  Installing : patchutils-0.3.3-4.el7 [##################### ] 35/42  Installing : patchutils-0.3.3-4.el7.x86_64                   35/42 
+  Installing : indent-2.2.11-13.el7.x [                      ] 36/42  Installing : indent-2.2.11-13.el7.x [###                   ] 36/42  Installing : indent-2.2.11-13.el7.x [####                  ] 36/42  Installing : indent-2.2.11-13.el7.x [######                ] 36/42  Installing : indent-2.2.11-13.el7.x [#######               ] 36/42  Installing : indent-2.2.11-13.el7.x [###########           ] 36/42  Installing : indent-2.2.11-13.el7.x [############          ] 36/42  Installing : indent-2.2.11-13.el7.x [##############        ] 36/42  Installing : indent-2.2.11-13.el7.x [###############       ] 36/42  Installing : indent-2.2.11-13.el7.x [################      ] 36/42  Installing : indent-2.2.11-13.el7.x [#################     ] 36/42  Installing : indent-2.2.11-13.el7.x [##################    ] 36/42  Installing : indent-2.2.11-13.el7.x [###################   ] 36/42  Installing : indent-2.2.11-13.el7.x [####################  ] 36/42  Installing : indent-2.2.11-13.el7.x [##################### ] 36/42  Installing : indent-2.2.11-13.el7.x86_64                     36/42 
+  Installing : rcs-5.9.0-5.el7.x86_64 [                      ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [##                    ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [###                   ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [######                ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [#######               ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [##########            ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [############          ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [##############        ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [###############       ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [#################     ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [##################    ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [###################   ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [####################  ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64 [##################### ] 37/42  Installing : rcs-5.9.0-5.el7.x86_64                          37/42 
+  Installing : cscope-15.8-7.el7.x86_ [                      ] 38/42  Installing : cscope-15.8-7.el7.x86_ [#                     ] 38/42  Installing : cscope-15.8-7.el7.x86_ [##                    ] 38/42  Installing : cscope-15.8-7.el7.x86_ [####                  ] 38/42  Installing : cscope-15.8-7.el7.x86_ [#####                 ] 38/42  Installing : cscope-15.8-7.el7.x86_ [#######               ] 38/42  Installing : cscope-15.8-7.el7.x86_ [#########             ] 38/42  Installing : cscope-15.8-7.el7.x86_ [##########            ] 38/42  Installing : cscope-15.8-7.el7.x86_ [############          ] 38/42  Installing : cscope-15.8-7.el7.x86_ [#############         ] 38/42  Installing : cscope-15.8-7.el7.x86_ [###############       ] 38/42  Installing : cscope-15.8-7.el7.x86_ [#################     ] 38/42  Installing : cscope-15.8-7.el7.x86_ [##################    ] 38/42  Installing : cscope-15.8-7.el7.x86_ [####################  ] 38/42  Installing : cscope-15.8-7.el7.x86_ [##################### ] 38/42  Installing : cscope-15.8-7.el7.x86_64                        38/42 
+  Installing : rpm-sign-4.11.3-17.el7 [                      ] 39/42  Installing : rpm-sign-4.11.3-17.el7 [####################  ] 39/42  Installing : rpm-sign-4.11.3-17.el7 [##################### ] 39/42  Installing : rpm-sign-4.11.3-17.el7.x86_64                   39/42 
+  Installing : 1:doxygen-1.8.5-3.el7. [                      ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [#                     ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [##                    ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [###                   ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [####                  ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [#####                 ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [######                ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [#######               ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [########              ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [#########             ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [##########            ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [###########           ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [############          ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [#############         ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [##############        ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [###############       ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [################      ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [#################     ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [##################    ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [###################   ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [####################  ] 40/42  Installing : 1:doxygen-1.8.5-3.el7. [##################### ] 40/42  Installing : 1:doxygen-1.8.5-3.el7.x86_64                    40/42 
+  Installing : byacc-1.9.20130304-3.e [                      ] 41/42  Installing : byacc-1.9.20130304-3.e [##########            ] 41/42  Installing : byacc-1.9.20130304-3.e [#############         ] 41/42  Installing : byacc-1.9.20130304-3.e [##############        ] 41/42  Installing : byacc-1.9.20130304-3.e [####################  ] 41/42  Installing : byacc-1.9.20130304-3.e [##################### ] 41/42  Installing : byacc-1.9.20130304-3.el7.x86_64                 41/42 
+  Installing : ctags-5.8-13.el7.x86_6 [                      ] 42/42  Installing : ctags-5.8-13.el7.x86_6 [###                   ] 42/42  Installing : ctags-5.8-13.el7.x86_6 [#######               ] 42/42  Installing : ctags-5.8-13.el7.x86_6 [###########           ] 42/42  Installing : ctags-5.8-13.el7.x86_6 [##############        ] 42/42  Installing : ctags-5.8-13.el7.x86_6 [###############       ] 42/42  Installing : ctags-5.8-13.el7.x86_6 [################      ] 42/42  Installing : ctags-5.8-13.el7.x86_6 [#################     ] 42/42  Installing : ctags-5.8-13.el7.x86_6 [####################  ] 42/42  Installing : ctags-5.8-13.el7.x86_6 [##################### ] 42/42  Installing : ctags-5.8-13.el7.x86_64                         42/42 
+  Verifying  : ctags-5.8-13.el7.x86_64                          1/42 
+  Verifying  : perl-XML-Parser-2.41-10.el7.x86_64               2/42 
+  Verifying  : bison-2.7-4.el7.x86_64                           3/42 
+  Verifying  : mokutil-0.9-2.el7.x86_64                         4/42 
+  Verifying  : byacc-1.9.20130304-3.el7.x86_64                  5/42 
+  Verifying  : apr-1.4.8-3.el7.x86_64                           6/42 
+  Verifying  : automake-1.13.4-3.el7.noarch                     7/42 
+  Verifying  : m4-1.4.16-10.el7.x86_64                          8/42 
+  Verifying  : 1:doxygen-1.8.5-3.el7.x86_64                     9/42 
+  Verifying  : perl-TermReadKey-2.30-20.el7.x86_64             10/42 
+  Verifying  : rpm-sign-4.11.3-17.el7.x86_64                   11/42 
+  Verifying  : perl-Test-Harness-3.28-3.el7.noarch             12/42 
+  Verifying  : subversion-1.7.14-10.el7.x86_64                 13/42 
+  Verifying  : perl-Thread-Queue-3.02-2.el7.noarch             14/42 
+  Verifying  : cscope-15.8-7.el7.x86_64                        15/42 
+  Verifying  : systemtap-devel-2.8-10.el7.x86_64               16/42 
+  Verifying  : patch-2.7.1-8.el7.x86_64                        17/42 
+  Verifying  : rcs-5.9.0-5.el7.x86_64                          18/42 
+  Verifying  : 1:perl-Error-0.17020-2.el7.noarch               19/42 
+  Verifying  : gettext-common-devel-0.18.2.1-4.el7.noarch      20/42 
+  Verifying  : libquadmath-devel-4.8.5-4.el7.x86_64            21/42 
+  Verifying  : perl-Data-Dumper-2.145-3.el7.x86_64             22/42 
+  Verifying  : systemtap-client-2.8-10.el7.x86_64              23/42 
+  Verifying  : perl-Git-1.8.3.1-6.el7_2.1.noarch               24/42 
+  Verifying  : indent-2.2.11-13.el7.x86_64                     25/42 
+  Verifying  : apr-util-1.5.2-6.el7.x86_64                     26/42 
+  Verifying  : rpm-build-4.11.3-17.el7.x86_64                  27/42 
+  Verifying  : flex-2.5.37-3.el7.x86_64                        28/42 
+  Verifying  : systemtap-2.8-10.el7.x86_64                     29/42 
+  Verifying  : gettext-devel-0.18.2.1-4.el7.x86_64             30/42 
+  Verifying  : patchutils-0.3.3-4.el7.x86_64                   31/42 
+  Verifying  : autoconf-2.69-11.el7.noarch                     32/42 
+  Verifying  : intltool-0.50.2-6.el7.noarch                    33/42 
+  Verifying  : redhat-rpm-config-9.1.0-68.el7.centos.noarch    34/42 
+  Verifying  : subversion-libs-1.7.14-10.el7.x86_64            35/42 
+  Verifying  : gcc-gfortran-4.8.5-4.el7.x86_64                 36/42 
+  Verifying  : dwz-0.11-3.el7.x86_64                           37/42 
+  Verifying  : libtool-2.4.2-21.el7_2.x86_64                   38/42 
+  Verifying  : diffstat-1.57-4.el7.x86_64                      39/42 
+  Verifying  : git-1.8.3.1-6.el7_2.1.x86_64                    40/42 
+  Verifying  : swig-2.0.10-4.el7.x86_64                        41/42 
+  Verifying  : perl-srpm-macros-1-8.el7.noarch                 42/42 
+
+Installed:
+  autoconf.noarch 0:2.69-11.el7                                      
+  automake.noarch 0:1.13.4-3.el7                                     
+  bison.x86_64 0:2.7-4.el7                                           
+  byacc.x86_64 0:1.9.20130304-3.el7                                  
+  cscope.x86_64 0:15.8-7.el7                                         
+  ctags.x86_64 0:5.8-13.el7                                          
+  diffstat.x86_64 0:1.57-4.el7                                       
+  doxygen.x86_64 1:1.8.5-3.el7                                       
+  flex.x86_64 0:2.5.37-3.el7                                         
+  gcc-gfortran.x86_64 0:4.8.5-4.el7                                  
+  git.x86_64 0:1.8.3.1-6.el7_2.1                                     
+  indent.x86_64 0:2.2.11-13.el7                                      
+  intltool.noarch 0:0.50.2-6.el7                                     
+  libtool.x86_64 0:2.4.2-21.el7_2                                    
+  patch.x86_64 0:2.7.1-8.el7                                         
+  patchutils.x86_64 0:0.3.3-4.el7                                    
+  rcs.x86_64 0:5.9.0-5.el7                                           
+  redhat-rpm-config.noarch 0:9.1.0-68.el7.centos                     
+  rpm-build.x86_64 0:4.11.3-17.el7                                   
+  rpm-sign.x86_64 0:4.11.3-17.el7                                    
+  subversion.x86_64 0:1.7.14-10.el7                                  
+  swig.x86_64 0:2.0.10-4.el7                                         
+  systemtap.x86_64 0:2.8-10.el7                                      
+
+Dependency Installed:
+  apr.x86_64 0:1.4.8-3.el7                                           
+  apr-util.x86_64 0:1.5.2-6.el7                                      
+  dwz.x86_64 0:0.11-3.el7                                            
+  gettext-common-devel.noarch 0:0.18.2.1-4.el7                       
+  gettext-devel.x86_64 0:0.18.2.1-4.el7                              
+  libquadmath-devel.x86_64 0:4.8.5-4.el7                             
+  m4.x86_64 0:1.4.16-10.el7                                          
+  mokutil.x86_64 0:0.9-2.el7                                         
+  perl-Data-Dumper.x86_64 0:2.145-3.el7                              
+  perl-Error.noarch 1:0.17020-2.el7                                  
+  perl-Git.noarch 0:1.8.3.1-6.el7_2.1                                
+  perl-TermReadKey.x86_64 0:2.30-20.el7                              
+  perl-Test-Harness.noarch 0:3.28-3.el7                              
+  perl-Thread-Queue.noarch 0:3.02-2.el7                              
+  perl-XML-Parser.x86_64 0:2.41-10.el7                               
+  perl-srpm-macros.noarch 0:1-8.el7                                  
+  subversion-libs.x86_64 0:1.7.14-10.el7                             
+  systemtap-client.x86_64 0:2.8-10.el7                               
+  systemtap-devel.x86_64 0:2.8-10.el7                                
+
+Complete!
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# cd ../compile.ASS[K[K[K[K/ASST0
+bash: cd: ../compile/ASST0: No such file or directory
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# cd ~/cs161/src/kern/conf
+]0;root@localhost:~/cs161/src/kern/conf]7;file://localhost.localdomain/root/cs161/src/kern/conf[root@localhost conf]# ls
+ASST0  ASST2      ASST3  ASST5   conf.kern  [0m[38;5;34mnewvers.sh[0m
+ASST1  ASST2-OPT  ASST4  [38;5;34mconfig[0m  [38;5;27mCVS[0m
+]0;root@localhost:~/cs161/src/kern/conf]7;file://localhost.localdomain/root/cs161/src/kern/conf[root@localhost conf]# cd ../compile/[K/ASST0
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make[K[K[K[Kls
+autoconf.c  depend.mk  Makefile      opt-net.h
+autoconf.h  files.mk   opt-dumbvm.h  opt-sfs.h
+defs.mk     [0m[38;5;51mmachine[0m    opt-netfs.h   opt-synchprobs.h
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make depend
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -M ../../dev/generic/console.c ../../dev/lamebus/emu.c ../../dev/lamebus/lser.c ../../dev/lamebus/lhd.c ../../dev/generic/pseudorand.c ../../dev/generic/random.c ../../dev/lamebus/ltimer.c ../../dev/lamebus/lamebus.c ../../dev/lamebus/lrandom.c ../../dev/generic/beep.c ../../dev/lamebus/ltrace.c ../../dev/generic/rtclock.c ../../dev/lamebus/ltimer_att.c ../../dev/lamebus/con_lser.c ../../dev/lamebus/lhd_att.c ../../dev/lamebus/random_lrandom.c ../../dev/lamebus/rtclock_ltimer.c ../../dev/lamebus/ltrace_att.c ../../dev/lamebus/lser_att.c ../../dev/lamebus/lrandom_att.c ../../dev/lamebus/emu_att.c ../../dev/lamebus/beep_ltimer.c ../../dev/generic/pseudorand_att.c ../../fs/sfs/sfs_vnode.c ../../fs/sfs/sfs_fs.c ../../arch/mips/mips/dumbvm.c ../../fs/sfs/sfs_io.c ../../arch/mips/mips/cache_mips1.S ../../arch/mips/mips/exception.S ../../arch/mips/mips/lamebus_mips.c ../../arch/mips/mips/interrupt.c ../../arch/mips/mips/pcb.c ../../arch/mips/mips/ram.c ../../arch/mips/mips/spl.c ../../arch/mips/mips/start.S ../../arch/mips/mips/switch.S ../../arch/mips/mips/syscall.c ../../arch/mips/mips/threadstart.S ../../arch/mips/mips/trap.c ../../arch/mips/mips/tlb_mips1.S ../../../lib/libc/mips-setjmp.S ../../lib/copyinout.c ../../lib/array.c ../../lib/bitmap.c ../../lib/queue.c ../../lib/kheap.c ../../lib/kprintf.c ../../lib/kgets.c ../../lib/misc.c ../../lib/ntoh.c ../../../lib/libc/__printf.c ../../../lib/libc/snprintf.c ../../../lib/libc/atoi.c ../../../lib/libc/bzero.c ../../../lib/libc/memcpy.c ../../../lib/libc/memmove.c ../../../lib/libc/strcat.c ../../../lib/libc/strchr.c ../../../lib/libc/strcmp.c ../../../lib/libc/strcpy.c ../../../lib/libc/strlen.c ../../../lib/libc/strrchr.c ../../../lib/libc/strtok_r.c ../../dev/init.c ../../fs/vfs/device.c ../../fs/vfs/vfscwd.c ../../fs/vfs/vfslist.c ../../fs/vfs/vfslookup.c ../../fs/vfs/vfspath.c ../../fs/vfs/vnode.c ../../fs/vfs/devnull.c ../../thread/hardclock.c ../../thread/synch.c ../../thread/scheduler.c ../../thread/thread.c ../../main/main.c ../../main/menu.c ../../userprog/loadelf.c ../../userprog/runprogram.c ../../userprog/uio.c ../../test/arraytest.c ../../test/bitmaptest.c ../../test/queuetest.c ../../test/threadtest.c ../../test/tt3.c ../../test/synchtest.c ../../test/malloctest.c ../../test/fstest.c ../../compile/ASST0/autoconf.c > depend.mk
+/bin/sh: cs161-gcc: command not found
+make: *** [depend] Error 127
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make depend.mk
+make: Nothing to be done for `depend.mk'.
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/generic/console.c
+make: cs161-gcc: Command not found
+make: *** [console.o] Error 127
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# ls
+autoconf.c  depend.mk  Makefile      opt-net.h
+autoconf.h  files.mk   opt-dumbvm.h  opt-sfs.h
+defs.mk     [0m[38;5;51mmachine[0m    opt-netfs.h   opt-synchprobs.h
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# cd .. [K
+]0;root@localhost:~/cs161/src/kern/compile]7;file://localhost.localdomain/root/cs161/src/kern/compile[root@localhost compile]# cd ..
+]0;root@localhost:~/cs161/src/kern]7;file://localhost.localdomain/root/cs161/src/kern[root@localhost kern]# cd ..
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# cd ..
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# cd[K[Kls
+[0m[38;5;27mbin[0m                     [38;5;9mcs161-gdb-1.5.tgz[0m  [38;5;27msys161-1.14[0m
+[38;5;27mcs161-binutils-1.4[0m      [38;5;27mcvsroot[0m            [38;5;9msys161-1.14.tar.gz[0m
+[38;5;9mcs161-binutils-1.4.tar[0m  [38;5;9mos161-1.10.tar.gz[0m  [38;5;27mtools[0m
+[38;5;27mcs161-gcc-1.5[0m           [38;5;27mproj[0m               typescript.script
+[38;5;9mcs161-gcc-1.5.tgz[0m       [38;5;27mroot[0m
+[38;5;27mcs161-gdb-1.5[0m           [38;5;27msrc[0m
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# cd bin
+]0;root@localhost:~/cs161/bin]7;file://localhost.localdomain/root/cs161/bin[root@localhost bin]# ls
+[0m[38;5;51mcs161-addr2line[0m  [38;5;51mcs161-cpp[0m  [38;5;51mcs161-nm[0m       [38;5;51mcs161-readelf[0m
+[38;5;51mcs161-ar[0m         [38;5;51mcs161-gcc[0m  [38;5;51mcs161-objcopy[0m  [38;5;51mcs161-size[0m
+[38;5;51mcs161-as[0m         [38;5;51mcs161-gdb[0m  [38;5;51mcs161-objdump[0m  [38;5;51mcs161-strings[0m
+[38;5;51mcs161-c++filt[0m    [38;5;51mcs161-ld[0m   [38;5;51mcs161-ranlib[0m   [38;5;51mcs161-strip[0m
+]0;root@localhost:~/cs161/bin]7;file://localhost.localdomain/root/cs161/bin[root@localhost bin]# cd ..
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]#  cd.[K ..
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# cd ..[K[K[K[K[Kexport PATH=~/cs161/bin:$PATH
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# cd ..[K[K[K[K[Kls
+anaconda-ks.cfg  initial-setup-ks.cfg  sample.script
+[0m[38;5;27mcs161[0m            question2_1.script    [38;5;34msimple[0m
+[38;5;27mDesktop[0m          questions2_2.script   simple.c
+[38;5;27mDownloads[0m        questions2_3.script   simple.c~
+file1.script     questions2_4.script   sys161.conf
+file.gdbinit     questions.script
+file.gdbinit~    questions.txt
+]0;root@localhost:~]7;file://localhost.localdomain/root[root@localhost ~]# cd cs161/[K
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# ls
+[0m[38;5;27mbin[0m                     [38;5;9mcs161-gdb-1.5.tgz[0m  [38;5;27msys161-1.14[0m
+[38;5;27mcs161-binutils-1.4[0m      [38;5;27mcvsroot[0m            [38;5;9msys161-1.14.tar.gz[0m
+[38;5;9mcs161-binutils-1.4.tar[0m  [38;5;9mos161-1.10.tar.gz[0m  [38;5;27mtools[0m
+[38;5;27mcs161-gcc-1.5[0m           [38;5;27mproj[0m               typescript.script
+[38;5;9mcs161-gcc-1.5.tgz[0m       [38;5;27mroot[0m
+[38;5;27mcs161-gdb-1.5[0m           [38;5;27msrc[0m
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# cd src
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# cd kern
+]0;root@localhost:~/cs161/src/kern]7;file://localhost.localdomain/root/cs161/src/kern[root@localhost kern]# cd [K[K[Kls
+[0m[38;5;27march[0m   [38;5;27mcompile[0m  [38;5;27mCVS[0m  [38;5;27mfs[0m       [38;5;27mlib[0m   Makefile  [38;5;27mthread[0m    [38;5;27mvm[0m
+[38;5;27masst1[0m  [38;5;27mconf[0m     [38;5;27mdev[0m  [38;5;27minclude[0m  [38;5;27mmain[0m  [38;5;27mtest[0m      [38;5;27muserprog[0m
+]0;root@localhost:~/cs161/src/kern]7;file://localhost.localdomain/root/cs161/src/kern[root@localhost kern]# cd config
+bash: cd: config: No such file or directory
+]0;root@localhost:~/cs161/src/kern]7;file://localhost.localdomain/root/cs161/src/kern[root@localhost kern]# cd conf
+]0;root@localhost:~/cs161/src/kern/conf]7;file://localhost.localdomain/root/cs161/src/kern/conf[root@localhost conf]# cd [K[K[Kls
+ASST0  ASST2      ASST3  ASST5   conf.kern  [0m[38;5;34mnewvers.sh[0m
+ASST1  ASST2-OPT  ASST4  [38;5;34mconfig[0m  [38;5;27mCVS[0m
+]0;root@localhost:~/cs161/src/kern/conf]7;file://localhost.localdomain/root/cs161/src/kern/conf[root@localhost conf]# cd ../compile/ASST0
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make dpen[K[K[Kepend
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -M ../../dev/generic/console.c ../../dev/lamebus/emu.c ../../dev/lamebus/lser.c ../../dev/lamebus/lhd.c ../../dev/generic/pseudorand.c ../../dev/generic/random.c ../../dev/lamebus/ltimer.c ../../dev/lamebus/lamebus.c ../../dev/lamebus/lrandom.c ../../dev/generic/beep.c ../../dev/lamebus/ltrace.c ../../dev/generic/rtclock.c ../../dev/lamebus/ltimer_att.c ../../dev/lamebus/con_lser.c ../../dev/lamebus/lhd_att.c ../../dev/lamebus/random_lrandom.c ../../dev/lamebus/rtclock_ltimer.c ../../dev/lamebus/ltrace_att.c ../../dev/lamebus/lser_att.c ../../dev/lamebus/lrandom_att.c ../../dev/lamebus/emu_att.c ../../dev/lamebus/beep_ltimer.c ../../dev/generic/pseudorand_att.c ../../fs/sfs/sfs_vnode.c ../../fs/sfs/sfs_fs.c ../../arch/mips/mips/dumbvm.c ../../fs/sfs/sfs_io.c ../../arch/mips/mips/cache_mips1.S ../../arch/mips/mips/exception.S ../../arch/mips/mips/lamebus_mips.c ../../arch/mips/mips/interrupt.c ../../arch/mips/mips/pcb.c ../../arch/mips/mips/ram.c ../../arch/mips/mips/spl.c ../../arch/mips/mips/start.S ../../arch/mips/mips/switch.S ../../arch/mips/mips/syscall.c ../../arch/mips/mips/threadstart.S ../../arch/mips/mips/trap.c ../../arch/mips/mips/tlb_mips1.S ../../../lib/libc/mips-setjmp.S ../../lib/copyinout.c ../../lib/array.c ../../lib/bitmap.c ../../lib/queue.c ../../lib/kheap.c ../../lib/kprintf.c ../../lib/kgets.c ../../lib/misc.c ../../lib/ntoh.c ../../../lib/libc/__printf.c ../../../lib/libc/snprintf.c ../../../lib/libc/atoi.c ../../../lib/libc/bzero.c ../../../lib/libc/memcpy.c ../../../lib/libc/memmove.c ../../../lib/libc/strcat.c ../../../lib/libc/strchr.c ../../../lib/libc/strcmp.c ../../../lib/libc/strcpy.c ../../../lib/libc/strlen.c ../../../lib/libc/strrchr.c ../../../lib/libc/strtok_r.c ../../dev/init.c ../../fs/vfs/device.c ../../fs/vfs/vfscwd.c ../../fs/vfs/vfslist.c ../../fs/vfs/vfslookup.c ../../fs/vfs/vfspath.c ../../fs/vfs/vnode.c ../../fs/vfs/devnull.c ../../thread/hardclock.c ../../thread/synch.c ../../thread/scheduler.c ../../thread/thread.c ../../main/main.c ../../main/menu.c ../../userprog/loadelf.c ../../userprog/runprogram.c ../../userprog/uio.c ../../test/arraytest.c ../../test/bitmaptest.c ../../test/queuetest.c ../../test/threadtest.c ../../test/tt3.c ../../test/synchtest.c ../../test/malloctest.c ../../test/fstest.c ../../compile/ASST0/autoconf.c > depend.mk
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/generic/console.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/emu.c
+../../dev/lamebus/emu.c: In function ‘emufs_stat’:
+../../dev/lamebus/emu.c:607: warning: pointer targets in passing argument 2 of ‘(vnode_check(v, "gettype"), v->vn_ops->vop_gettype)’ differ in signedness
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/lser.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/lhd.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/generic/pseudorand.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/generic/random.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/ltimer.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/lamebus.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/lrandom.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/generic/beep.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/ltrace.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/generic/rtclock.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/ltimer_att.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/con_lser.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/lhd_att.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/random_lrandom.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/rtclock_ltimer.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/ltrace_att.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/lser_att.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/lrandom_att.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/emu_att.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/lamebus/beep_ltimer.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/generic/pseudorand_att.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/sfs/sfs_vnode.c
+../../fs/sfs/sfs_vnode.c: In function ‘sfs_stat’:
+../../fs/sfs/sfs_vnode.c:981: warning: pointer targets in passing argument 2 of ‘(vnode_check(v, "gettype"), v->vn_ops->vop_gettype)’ differ in signedness
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/sfs/sfs_fs.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/dumbvm.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/sfs/sfs_io.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/cache_mips1.S
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/exception.S
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/lamebus_mips.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/interrupt.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/pcb.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/ram.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/spl.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/start.S
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/switch.S
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/syscall.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/threadstart.S
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/trap.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../arch/mips/mips/tlb_mips1.S
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/mips-setjmp.S
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../lib/copyinout.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../lib/array.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../lib/bitmap.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../lib/queue.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../lib/kheap.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../lib/kprintf.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../lib/kgets.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../lib/misc.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../lib/ntoh.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/__printf.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/snprintf.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/atoi.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/bzero.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/memcpy.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/memmove.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/strcat.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/strchr.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/strcmp.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/strcpy.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/strlen.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/strrchr.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../../lib/libc/strtok_r.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../dev/init.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/vfs/device.c
+../../fs/vfs/device.c: In function ‘dev_stat’:
+../../fs/vfs/device.c:122: warning: pointer targets in passing argument 2 of ‘(vnode_check(v, "gettype"), v->vn_ops->vop_gettype)’ differ in signedness
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/vfs/vfscwd.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/vfs/vfslist.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/vfs/vfslookup.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/vfs/vfspath.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/vfs/vnode.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../fs/vfs/devnull.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../thread/hardclock.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../thread/synch.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../thread/scheduler.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../thread/thread.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../main/main.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../main/menu.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../userprog/loadelf.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../userprog/runprogram.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../userprog/uio.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../test/arraytest.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../test/bitmaptest.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../test/queuetest.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../test/threadtest.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../test/tt3.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../test/synchtest.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../test/malloctest.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../test/fstest.c
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c ../../compile/ASST0/autoconf.c
+../../conf/newvers.sh ASST0
+*** This is ASST0 build #1 ***
+cs161-gcc   -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -g -nostdinc -I../../include -I../../dev -I.  -ffreestanding -D_KERNEL -G 0 -c vers.c
+cs161-ld   -nostdlib -Ttext 0x80001000 -T ../../arch/mips/conf/ldscript -G 0 console.o emu.o lser.o lhd.o pseudorand.o random.o ltimer.o lamebus.o lrandom.o beep.o ltrace.o rtclock.o ltimer_att.o con_lser.o lhd_att.o random_lrandom.o rtclock_ltimer.o ltrace_att.o lser_att.o lrandom_att.o emu_att.o beep_ltimer.o pseudorand_att.o sfs_vnode.o sfs_fs.o dumbvm.o sfs_io.o cache_mips1.o exception.o lamebus_mips.o interrupt.o pcb.o ram.o spl.o start.o switch.o syscall.o threadstart.o trap.o tlb_mips1.o mips-setjmp.o copyinout.o array.o bitmap.o queue.o kheap.o kprintf.o kgets.o misc.o ntoh.o __printf.o snprintf.o atoi.o bzero.o memcpy.o memmove.o strcat.o strchr.o strcmp.o strcpy.o strlen.o strrchr.o strtok_r.o init.o device.o vfscwd.o vfslist.o vfslookup.o vfspath.o vnode.o devnull.o hardclock.o synch.o scheduler.o thread.o main.o menu.o loadelf.o runprogram.o uio.o arraytest.o bitmaptest.o queuetest.o threadtest.o tt3.o synchtest.o malloctest.o fstest.o autoconf.o vers.o -o kernel
+cs161-size kernel
+   text	   data	    bss	    dec	    hex	filename
+ 160552	    448	   7668	 168668	  292dc	kernel
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# make[C[Kmake install
+[ -d /root/cs161/root ] || mkdir /root/cs161/root
+cp kernel /root/cs161/root/kernel-ASST0
+rm -f /root/cs161/root/kernel
+ln -s kernel-ASST0 /root/cs161/root/kernel
+]0;root@localhost:~/cs161/src/kern/compile/ASST0]7;file://localhost.localdomain/root/cs161/src/kern/compile/ASST0[root@localhost ASST0]# cd ~/cs161/src
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# make
+make includes
+make[1]: Entering directory `/root/cs161/src'
+(cd kern && make includes)
+make[2]: Entering directory `/root/cs161/src/kern'
+[ -d /root/cs161/root/include/kern ] || mkdir -p /root/cs161/root/include/kern
+[ -d /root/cs161/root/include/mips ] || mkdir -p /root/cs161/root/include/mips
+rm -f /root/cs161/root/include/machine
+ln -s mips /root/cs161/root/include/machine
+Installing kernel includes...
+Installing callno.h
+Installing errmsg.h
+Installing errno.h
+Installing ioctl.h
+Installing limits.h
+Installing sfs.h
+Installing stat.h
+Installing types.h
+Installing unistd.h
+Installing machine-dependent includes for mips...
+Installing asmdefs.h
+Installing setjmp.h
+Installing types.h
+make[2]: Leaving directory `/root/cs161/src/kern'
+(cd include && make includes)
+make[2]: Entering directory `/root/cs161/src/include'
+[ -d /root/cs161/root/include ] || mkdir -p /root/cs161/root/include
+[ -d /root/cs161/root/include/sys ] || mkdir -p /root/cs161/root/include/sys
+Installing library includes...
+Installing assert.h
+Installing err.h
+Installing errno.h
+Installing fcntl.h
+Installing limits.h
+Installing setjmp.h
+Installing stdarg.h
+Installing stdio.h
+Installing stdlib.h
+Installing string.h
+Installing time.h
+Installing unistd.h
+Installing sys/ioctl.h
+Installing sys/reboot.h
+Installing sys/stat.h
+Installing sys/types.h
+Installing sys/wait.h
+make[2]: Leaving directory `/root/cs161/src/include'
+(cd lib/hostcompat && make includes)
+make[2]: Entering directory `/root/cs161/src/lib/hostcompat'
+[ -d /root/cs161/root/hostinclude ] || mkdir /root/cs161/root/hostinclude
+rm -f /root/cs161/root/hostinclude/kern
+ln -s ../include/kern /root/cs161/root/hostinclude/kern
+cp hostcompat.h /root/cs161/root/hostinclude
+make[2]: Leaving directory `/root/cs161/src/lib/hostcompat'
+make[1]: Leaving directory `/root/cs161/src'
+make depend
+make[1]: Entering directory `/root/cs161/src'
+(cd include && make depend)
+make[2]: Entering directory `/root/cs161/src/include'
+make[2]: Nothing to be done for `depend'.
+make[2]: Leaving directory `/root/cs161/src/include'
+(cd lib && make depend)
+make[2]: Entering directory `/root/cs161/src/lib'
+(cd crt0 && make depend)
+make[3]: Entering directory `/root/cs161/src/lib/crt0'
+make[3]: `depend' is up to date.
+make[3]: Leaving directory `/root/cs161/src/lib/crt0'
+(cd libc && make depend)
+make[3]: Entering directory `/root/cs161/src/lib/libc'
+make syscalls.S
+make[4]: Entering directory `/root/cs161/src/lib/libc'
+rm -f syscalls.S syscalls.S.tmp
+echo '/* Automatically generated from syscalls-mips.S */' \
+	> syscalls.S.tmp
+cat syscalls-mips.S >> syscalls.S.tmp
+./callno-parse.sh < ../../kern/include/kern/callno.h >> syscalls.S.tmp
+mv -f syscalls.S.tmp syscalls.S
+make[4]: Leaving directory `/root/cs161/src/lib/libc'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M __printf.c snprintf.c printf.c atoi.c bzero.c memcmp.c memcpy.c memmove.c memset.c strcat.c strchr.c strcmp.c strcpy.c strlen.c strrchr.c strtok.c strtok_r.c __assert.c __puts.c err.c getchar.c putchar.c puts.c  abort.c errno.c exit.c getcwd.c random.c strerror.c system.c time.c mips-setjmp.S syscalls.S |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > depend.mk
+make[3]: Leaving directory `/root/cs161/src/lib/libc'
+(cd hostcompat && make depend)
+make[3]: Entering directory `/root/cs161/src/lib/hostcompat'
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude  -MM err.c time.c hostcompat.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's/\.o/\.ho/' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > dependh.mk
+make[3]: Leaving directory `/root/cs161/src/lib/hostcompat'
+make[2]: Leaving directory `/root/cs161/src/lib'
+(cd bin && make depend)
+make[2]: Entering directory `/root/cs161/src/bin'
+(cd true && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/true'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M true.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/true'
+(cd false && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/false'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M false.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/false'
+(cd sync && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/sync'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M sync.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/sync'
+(cd mkdir && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/mkdir'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M mkdir.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/mkdir'
+(cd rmdir && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/rmdir'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M rmdir.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/rmdir'
+(cd pwd && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/pwd'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M pwd.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/pwd'
+(cd cat && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/cat'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M cat.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/cat'
+(cd cp && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/cp'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M cp.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/cp'
+(cd ln && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/ln'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M ln.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/ln'
+(cd mv && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/mv'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M mv.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/mv'
+(cd rm && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/rm'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M rm.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/rm'
+(cd ls && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/ls'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M ls.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/bin/ls'
+(cd sh && make depend)
+make[3]: Entering directory `/root/cs161/src/bin/sh'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M sh.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -MM sh.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's/\.o/\.ho/' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp dependh.mk
+make[3]: Leaving directory `/root/cs161/src/bin/sh'
+make[2]: Leaving directory `/root/cs161/src/bin'
+(cd sbin && make depend)
+make[2]: Entering directory `/root/cs161/src/sbin'
+(cd reboot && make depend)
+make[3]: Entering directory `/root/cs161/src/sbin/reboot'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M reboot.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/sbin/reboot'
+(cd halt && make depend)
+make[3]: Entering directory `/root/cs161/src/sbin/halt'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M halt.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/sbin/halt'
+(cd poweroff && make depend)
+make[3]: Entering directory `/root/cs161/src/sbin/poweroff'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M poweroff.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/sbin/poweroff'
+(cd mksfs && make depend)
+make[3]: Entering directory `/root/cs161/src/sbin/mksfs'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M mksfs.c disk.c support.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -MM mksfs.c disk.c support.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's/\.o/\.ho/' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp dependh.mk
+make[3]: Leaving directory `/root/cs161/src/sbin/mksfs'
+(cd dumpsfs && make depend)
+make[3]: Entering directory `/root/cs161/src/sbin/dumpsfs'
+ln -s ../mksfs/disk.c .
+ln -s ../mksfs/disk.h .
+ln -s ../mksfs/support.c .
+ln -s ../mksfs/support.h .
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M dumpsfs.c disk.c support.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -MM dumpsfs.c disk.c support.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's/\.o/\.ho/' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp dependh.mk
+make[3]: Leaving directory `/root/cs161/src/sbin/dumpsfs'
+make[2]: Leaving directory `/root/cs161/src/sbin'
+(cd testbin && make depend)
+make[2]: Entering directory `/root/cs161/src/testbin'
+(cd add && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/add'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M add.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/add'
+(cd argtest && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/argtest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M argtest.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/argtest'
+(cd badcall && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/badcall'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M bad_execv.c bad_waitpid.c bad_open.c bad_read.c bad_write.c bad_close.c bad_reboot.c bad_sbrk.c bad_ioctl.c bad_lseek.c bad_fsync.c bad_ftruncate.c bad_stat.c bad_remove.c bad_rename.c bad_link.c bad_mkdir.c bad_rmdir.c bad_chdir.c bad_getdirentry.c bad_symlink.c bad_readlink.c bad_dup2.c bad_pipe.c bad_time.c bad_getcwd.c common_buf.c common_fds.c common_path.c driver.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/badcall'
+(cd bigfile && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/bigfile'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M bigfile.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/bigfile'
+(cd conman && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/conman'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M conman.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/conman'
+(cd crash && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/crash'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M crash.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/crash'
+(cd ctest && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/ctest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M ctest.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/ctest'
+(cd dirconc && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/dirconc'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M dirconc.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/dirconc'
+(cd dirseek && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/dirseek'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M dirseek.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/dirseek'
+(cd dirtest && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/dirtest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M dirtest.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/dirtest'
+(cd f_test && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/f_test'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M f_test.c f_read.c f_write.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/f_test'
+(cd farm && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/farm'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M farm.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/farm'
+(cd faulter && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/faulter'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M faulter.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/faulter'
+(cd filetest && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/filetest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M filetest.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/filetest'
+(cd forkbomb && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/forkbomb'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M forkbomb.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/forkbomb'
+(cd forktest && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/forktest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M forktest.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/forktest'
+(cd guzzle && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/guzzle'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M guzzle.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/guzzle'
+(cd hash && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/hash'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M hash.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -MM hash.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's/\.o/\.ho/' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp dependh.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/hash'
+(cd hog && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/hog'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M hog.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/hog'
+(cd huge && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/huge'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M huge.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/huge'
+(cd kitchen && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/kitchen'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M kitchen.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/kitchen'
+(cd matmult && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/matmult'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M matmult.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/matmult'
+(cd palin && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/palin'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M palin.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/palin'
+(cd parallelvm && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/parallelvm'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M parallelvm.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/parallelvm'
+(cd randcall && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/randcall'
+make calls.c
+make[4]: Entering directory `/root/cs161/src/testbin/randcall'
+./gencalls.sh callspecs.txt > calls.c
+make[4]: Leaving directory `/root/cs161/src/testbin/randcall'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M calls.c main.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/randcall'
+(cd rmdirtest && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/rmdirtest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M rmdirtest.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/rmdirtest'
+(cd rmtest && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/rmtest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M rmtest.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/rmtest'
+(cd sink && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/sink'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M sink.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/sink'
+(cd sort && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/sort'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M sort.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/sort'
+(cd sty && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/sty'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M sty.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/sty'
+(cd tail && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/tail'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M tail.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/tail'
+(cd tictac && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/tictac'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M tictac.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/tictac'
+(cd triplehuge && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/triplehuge'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M triplehuge.c triple.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/triplehuge'
+(cd triplemat && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/triplemat'
+ln -s ../triplehuge/triple.c .
+ln -s ../triplehuge/triple.h .
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M triplemat.c triple.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/triplemat'
+(cd triplesort && make depend)
+make[3]: Entering directory `/root/cs161/src/testbin/triplesort'
+ln -s ../triplehuge/triple.c .
+ln -s ../triplehuge/triple.h .
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -M triplesort.c triple.c |\
+  awk '{x=$0~"^ ";for(i=1;i<=NF;i++){printf "%d %s\n",x,$i;x=1; }}'|\
+  sed '/1 \\/d' | awk '{ printf "%s%s", $1?" \\\n ":"\n", $2 }' |\
+  sed 's|/root/cs161/root|$(OSTREE)|;$p;$x' > .deptmp
+mv -f .deptmp depend.mk
+make[3]: Leaving directory `/root/cs161/src/testbin/triplesort'
+make[2]: Leaving directory `/root/cs161/src/testbin'
+(cd man && make depend)
+make[2]: Entering directory `/root/cs161/src/man'
+(cd toplevel && make depend)
+make[3]: Entering directory `/root/cs161/src/man/toplevel'
+make[3]: Nothing to be done for `depend'.
+make[3]: Leaving directory `/root/cs161/src/man/toplevel'
+(cd bin && make depend)
+make[3]: Entering directory `/root/cs161/src/man/bin'
+make[3]: Nothing to be done for `depend'.
+make[3]: Leaving directory `/root/cs161/src/man/bin'
+(cd sbin && make depend)
+make[3]: Entering directory `/root/cs161/src/man/sbin'
+make[3]: Nothing to be done for `depend'.
+make[3]: Leaving directory `/root/cs161/src/man/sbin'
+(cd testbin && make depend)
+make[3]: Entering directory `/root/cs161/src/man/testbin'
+make[3]: Nothing to be done for `depend'.
+make[3]: Leaving directory `/root/cs161/src/man/testbin'
+(cd libc && make depend)
+make[3]: Entering directory `/root/cs161/src/man/libc'
+make[3]: Nothing to be done for `depend'.
+make[3]: Leaving directory `/root/cs161/src/man/libc'
+(cd syscall && make depend)
+make[3]: Entering directory `/root/cs161/src/man/syscall'
+make[3]: Nothing to be done for `depend'.
+make[3]: Leaving directory `/root/cs161/src/man/syscall'
+(cd dev && make depend)
+make[3]: Entering directory `/root/cs161/src/man/dev'
+make[3]: Nothing to be done for `depend'.
+make[3]: Leaving directory `/root/cs161/src/man/dev'
+(cd misc && make depend)
+make[3]: Entering directory `/root/cs161/src/man/misc'
+make[3]: Nothing to be done for `depend'.
+make[3]: Leaving directory `/root/cs161/src/man/misc'
+make[2]: Leaving directory `/root/cs161/src/man'
+(cd kern && make depend)
+make[2]: Entering directory `/root/cs161/src/kern'
+make[2]: Nothing to be done for `depend'.
+make[2]: Leaving directory `/root/cs161/src/kern'
+make[1]: Leaving directory `/root/cs161/src'
+make compile
+make[1]: Entering directory `/root/cs161/src'
+(cd lib && make)
+make[2]: Entering directory `/root/cs161/src/lib'
+(cd crt0 && make all)
+make[3]: Entering directory `/root/cs161/src/lib/crt0'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c mips-crt0.S -o crt0.o
+make[3]: Leaving directory `/root/cs161/src/lib/crt0'
+(cd libc && make all)
+make[3]: Entering directory `/root/cs161/src/lib/libc'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c __printf.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c snprintf.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c printf.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c atoi.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bzero.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c memcmp.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c memcpy.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c memmove.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c memset.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c strcat.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c strchr.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c strcmp.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c strcpy.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c strlen.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c strrchr.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c strtok.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c strtok_r.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c __assert.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c __puts.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c err.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c getchar.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c putchar.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c puts.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c abort.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c errno.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c exit.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c getcwd.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c random.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c strerror.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c system.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c time.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c mips-setjmp.S
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c syscalls.S
+cs161-ar -cruv libc.a __printf.o snprintf.o printf.o atoi.o bzero.o memcmp.o memcpy.o memmove.o memset.o strcat.o strchr.o strcmp.o strcpy.o strlen.o strrchr.o strtok.o strtok_r.o __assert.o __puts.o err.o getchar.o putchar.o puts.o abort.o errno.o exit.o getcwd.o random.o strerror.o system.o time.o mips-setjmp.o syscalls.o
+a - __printf.o
+a - snprintf.o
+a - printf.o
+a - atoi.o
+a - bzero.o
+a - memcmp.o
+a - memcpy.o
+a - memmove.o
+a - memset.o
+a - strcat.o
+a - strchr.o
+a - strcmp.o
+a - strcpy.o
+a - strlen.o
+a - strrchr.o
+a - strtok.o
+a - strtok_r.o
+a - __assert.o
+a - __puts.o
+a - err.o
+a - getchar.o
+a - putchar.o
+a - puts.o
+a - abort.o
+a - errno.o
+a - exit.o
+a - getcwd.o
+a - random.o
+a - strerror.o
+a - system.o
+a - time.o
+a - mips-setjmp.o
+a - syscalls.o
+cs161-ranlib libc.a
+make[3]: Leaving directory `/root/cs161/src/lib/libc'
+(cd hostcompat && make all)
+make[3]: Entering directory `/root/cs161/src/lib/hostcompat'
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude  -c err.c -o err.ho
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude  -c time.c -o time.ho
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude  -c hostcompat.c -o hostcompat.ho
+ar -cruv libhostcompat.ha err.ho time.ho hostcompat.ho
+a - err.ho
+a - time.ho
+a - hostcompat.ho
+ranlib libhostcompat.ha
+make[3]: Leaving directory `/root/cs161/src/lib/hostcompat'
+make[2]: Leaving directory `/root/cs161/src/lib'
+(cd lib && make install)
+make[2]: Entering directory `/root/cs161/src/lib'
+(cd crt0 && make install)
+make[3]: Entering directory `/root/cs161/src/lib/crt0'
+[ -d /root/cs161/root/lib ] || mkdir /root/cs161/root/lib
+cp crt0.o /root/cs161/root/lib
+make[3]: Leaving directory `/root/cs161/src/lib/crt0'
+(cd libc && make install)
+make[3]: Entering directory `/root/cs161/src/lib/libc'
+[ -d /root/cs161/root/lib ] || mkdir /root/cs161/root/lib
+cp libc.a /root/cs161/root/lib
+make[3]: Leaving directory `/root/cs161/src/lib/libc'
+(cd hostcompat && make install)
+make[3]: Entering directory `/root/cs161/src/lib/hostcompat'
+[ -d /root/cs161/root/hostlib ] || mkdir /root/cs161/root/hostlib
+cp libhostcompat.ha /root/cs161/root/hostlib/libhostcompat.a
+ranlib /root/cs161/root/hostlib/libhostcompat.a
+make[3]: Leaving directory `/root/cs161/src/lib/hostcompat'
+make[2]: Leaving directory `/root/cs161/src/lib'
+(cd bin && make)
+make[2]: Entering directory `/root/cs161/src/bin'
+(cd true && make all)
+make[3]: Entering directory `/root/cs161/src/bin/true'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c true.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   true.o   -lc \
+   -o true
+make[3]: Leaving directory `/root/cs161/src/bin/true'
+(cd false && make all)
+make[3]: Entering directory `/root/cs161/src/bin/false'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c false.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   false.o   -lc \
+   -o false
+make[3]: Leaving directory `/root/cs161/src/bin/false'
+(cd sync && make all)
+make[3]: Entering directory `/root/cs161/src/bin/sync'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c sync.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   sync.o   -lc \
+   -o sync
+make[3]: Leaving directory `/root/cs161/src/bin/sync'
+(cd mkdir && make all)
+make[3]: Entering directory `/root/cs161/src/bin/mkdir'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c mkdir.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   mkdir.o   -lc \
+   -o mkdir
+make[3]: Leaving directory `/root/cs161/src/bin/mkdir'
+(cd rmdir && make all)
+make[3]: Entering directory `/root/cs161/src/bin/rmdir'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c rmdir.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   rmdir.o   -lc \
+   -o rmdir
+make[3]: Leaving directory `/root/cs161/src/bin/rmdir'
+(cd pwd && make all)
+make[3]: Entering directory `/root/cs161/src/bin/pwd'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c pwd.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   pwd.o   -lc \
+   -o pwd
+make[3]: Leaving directory `/root/cs161/src/bin/pwd'
+(cd cat && make all)
+make[3]: Entering directory `/root/cs161/src/bin/cat'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c cat.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   cat.o   -lc \
+   -o cat
+make[3]: Leaving directory `/root/cs161/src/bin/cat'
+(cd cp && make all)
+make[3]: Entering directory `/root/cs161/src/bin/cp'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c cp.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   cp.o   -lc \
+   -o cp
+make[3]: Leaving directory `/root/cs161/src/bin/cp'
+(cd ln && make all)
+make[3]: Entering directory `/root/cs161/src/bin/ln'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c ln.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   ln.o   -lc \
+   -o ln
+make[3]: Leaving directory `/root/cs161/src/bin/ln'
+(cd mv && make all)
+make[3]: Entering directory `/root/cs161/src/bin/mv'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c mv.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   mv.o   -lc \
+   -o mv
+make[3]: Leaving directory `/root/cs161/src/bin/mv'
+(cd rm && make all)
+make[3]: Entering directory `/root/cs161/src/bin/rm'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c rm.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   rm.o   -lc \
+   -o rm
+make[3]: Leaving directory `/root/cs161/src/bin/rm'
+(cd ls && make all)
+make[3]: Entering directory `/root/cs161/src/bin/ls'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c ls.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   ls.o   -lc \
+   -o ls
+make[3]: Leaving directory `/root/cs161/src/bin/ls'
+(cd sh && make all)
+make[3]: Entering directory `/root/cs161/src/bin/sh'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c sh.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   sh.o   -lc \
+   -o sh
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -c sh.c -o sh.ho
+gcc   sh.ho   \
+  /root/cs161/root/hostlib/libhostcompat.a -o host-sh
+make[3]: Leaving directory `/root/cs161/src/bin/sh'
+make[2]: Leaving directory `/root/cs161/src/bin'
+(cd sbin && make)
+make[2]: Entering directory `/root/cs161/src/sbin'
+(cd reboot && make all)
+make[3]: Entering directory `/root/cs161/src/sbin/reboot'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c reboot.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   reboot.o   -lc \
+   -o reboot
+make[3]: Leaving directory `/root/cs161/src/sbin/reboot'
+(cd halt && make all)
+make[3]: Entering directory `/root/cs161/src/sbin/halt'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c halt.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   halt.o   -lc \
+   -o halt
+make[3]: Leaving directory `/root/cs161/src/sbin/halt'
+(cd poweroff && make all)
+make[3]: Entering directory `/root/cs161/src/sbin/poweroff'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c poweroff.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   poweroff.o   -lc \
+   -o poweroff
+make[3]: Leaving directory `/root/cs161/src/sbin/poweroff'
+(cd mksfs && make all)
+make[3]: Entering directory `/root/cs161/src/sbin/mksfs'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c mksfs.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c disk.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c support.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   mksfs.o disk.o support.o   -lc \
+   -o mksfs
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -c mksfs.c -o mksfs.ho
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -c disk.c -o disk.ho
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -c support.c -o support.ho
+gcc   mksfs.ho disk.ho support.ho   \
+  /root/cs161/root/hostlib/libhostcompat.a -o host-mksfs
+make[3]: Leaving directory `/root/cs161/src/sbin/mksfs'
+(cd dumpsfs && make all)
+make[3]: Entering directory `/root/cs161/src/sbin/dumpsfs'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c dumpsfs.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c disk.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c support.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   dumpsfs.o disk.o support.o   -lc \
+   -o dumpsfs
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -c dumpsfs.c -o dumpsfs.ho
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -c disk.c -o disk.ho
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -c support.c -o support.ho
+gcc   dumpsfs.ho disk.ho support.ho   \
+  /root/cs161/root/hostlib/libhostcompat.a -o host-dumpsfs
+make[3]: Leaving directory `/root/cs161/src/sbin/dumpsfs'
+make[2]: Leaving directory `/root/cs161/src/sbin'
+(cd testbin && make)
+make[2]: Entering directory `/root/cs161/src/testbin'
+(cd add && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/add'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c add.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   add.o   -lc \
+   -o add
+make[3]: Leaving directory `/root/cs161/src/testbin/add'
+(cd argtest && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/argtest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c argtest.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   argtest.o   -lc \
+   -o argtest
+make[3]: Leaving directory `/root/cs161/src/testbin/argtest'
+(cd badcall && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/badcall'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_execv.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_waitpid.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_open.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_read.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_write.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_close.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_reboot.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_sbrk.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_ioctl.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_lseek.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_fsync.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_ftruncate.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_stat.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_remove.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_rename.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_link.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_mkdir.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_rmdir.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_chdir.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_getdirentry.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_symlink.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_readlink.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_dup2.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_pipe.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_time.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bad_getcwd.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c common_buf.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c common_fds.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c common_path.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c driver.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   bad_execv.o bad_waitpid.o bad_open.o bad_read.o bad_write.o bad_close.o bad_reboot.o bad_sbrk.o bad_ioctl.o bad_lseek.o bad_fsync.o bad_ftruncate.o bad_stat.o bad_remove.o bad_rename.o bad_link.o bad_mkdir.o bad_rmdir.o bad_chdir.o bad_getdirentry.o bad_symlink.o bad_readlink.o bad_dup2.o bad_pipe.o bad_time.o bad_getcwd.o common_buf.o common_fds.o common_path.o driver.o   -lc \
+   -o badcall
+make[3]: Leaving directory `/root/cs161/src/testbin/badcall'
+(cd bigfile && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/bigfile'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c bigfile.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   bigfile.o   -lc \
+   -o bigfile
+make[3]: Leaving directory `/root/cs161/src/testbin/bigfile'
+(cd conman && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/conman'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c conman.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   conman.o   -lc \
+   -o conman
+make[3]: Leaving directory `/root/cs161/src/testbin/conman'
+(cd crash && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/crash'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c crash.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   crash.o   -lc \
+   -o crash
+make[3]: Leaving directory `/root/cs161/src/testbin/crash'
+(cd ctest && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/ctest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c ctest.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   ctest.o   -lc \
+   -o ctest
+make[3]: Leaving directory `/root/cs161/src/testbin/ctest'
+(cd dirconc && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/dirconc'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c dirconc.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   dirconc.o   -lc \
+   -o dirconc
+make[3]: Leaving directory `/root/cs161/src/testbin/dirconc'
+(cd dirseek && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/dirseek'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c dirseek.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   dirseek.o   -lc \
+   -o dirseek
+make[3]: Leaving directory `/root/cs161/src/testbin/dirseek'
+(cd dirtest && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/dirtest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c dirtest.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   dirtest.o   -lc \
+   -o dirtest
+make[3]: Leaving directory `/root/cs161/src/testbin/dirtest'
+(cd f_test && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/f_test'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c f_test.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c f_read.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c f_write.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   f_test.o f_read.o f_write.o   -lc \
+   -o f_test
+make[3]: Leaving directory `/root/cs161/src/testbin/f_test'
+(cd farm && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/farm'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c farm.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   farm.o   -lc \
+   -o farm
+make[3]: Leaving directory `/root/cs161/src/testbin/farm'
+(cd faulter && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/faulter'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c faulter.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   faulter.o   -lc \
+   -o faulter
+make[3]: Leaving directory `/root/cs161/src/testbin/faulter'
+(cd filetest && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/filetest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c filetest.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   filetest.o   -lc \
+   -o filetest
+make[3]: Leaving directory `/root/cs161/src/testbin/filetest'
+(cd forkbomb && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/forkbomb'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c forkbomb.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   forkbomb.o   -lc \
+   -o forkbomb
+make[3]: Leaving directory `/root/cs161/src/testbin/forkbomb'
+(cd forktest && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/forktest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c forktest.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   forktest.o   -lc \
+   -o forktest
+make[3]: Leaving directory `/root/cs161/src/testbin/forktest'
+(cd guzzle && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/guzzle'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c guzzle.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   guzzle.o   -lc \
+   -o guzzle
+make[3]: Leaving directory `/root/cs161/src/testbin/guzzle'
+(cd hash && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/hash'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c hash.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   hash.o   -lc \
+   -o hash
+gcc  -Wall -W -Wwrite-strings -O2 -I/root/cs161/root/hostinclude -DHOST -c hash.c -o hash.ho
+gcc   hash.ho   \
+  /root/cs161/root/hostlib/libhostcompat.a -o host-hash
+make[3]: Leaving directory `/root/cs161/src/testbin/hash'
+(cd hog && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/hog'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c hog.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   hog.o   -lc \
+   -o hog
+make[3]: Leaving directory `/root/cs161/src/testbin/hog'
+(cd huge && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/huge'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c huge.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   huge.o   -lc \
+   -o huge
+make[3]: Leaving directory `/root/cs161/src/testbin/huge'
+(cd kitchen && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/kitchen'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c kitchen.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   kitchen.o   -lc \
+   -o kitchen
+make[3]: Leaving directory `/root/cs161/src/testbin/kitchen'
+(cd matmult && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/matmult'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c matmult.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   matmult.o   -lc \
+   -o matmult
+make[3]: Leaving directory `/root/cs161/src/testbin/matmult'
+(cd palin && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/palin'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c palin.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   palin.o   -lc \
+   -o palin
+make[3]: Leaving directory `/root/cs161/src/testbin/palin'
+(cd parallelvm && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/parallelvm'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c parallelvm.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   parallelvm.o   -lc \
+   -o parallelvm
+make[3]: Leaving directory `/root/cs161/src/testbin/parallelvm'
+(cd randcall && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/randcall'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c calls.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c main.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   calls.o main.o   -lc \
+   -o randcall
+make[3]: Leaving directory `/root/cs161/src/testbin/randcall'
+(cd rmdirtest && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/rmdirtest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c rmdirtest.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   rmdirtest.o   -lc \
+   -o rmdirtest
+make[3]: Leaving directory `/root/cs161/src/testbin/rmdirtest'
+(cd rmtest && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/rmtest'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c rmtest.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   rmtest.o   -lc \
+   -o rmtest
+make[3]: Leaving directory `/root/cs161/src/testbin/rmtest'
+(cd sink && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/sink'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c sink.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   sink.o   -lc \
+   -o sink
+make[3]: Leaving directory `/root/cs161/src/testbin/sink'
+(cd sort && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/sort'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c sort.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   sort.o   -lc \
+   -o sort
+make[3]: Leaving directory `/root/cs161/src/testbin/sort'
+(cd sty && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/sty'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c sty.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   sty.o   -lc \
+   -o sty
+make[3]: Leaving directory `/root/cs161/src/testbin/sty'
+(cd tail && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/tail'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c tail.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   tail.o   -lc \
+   -o tail
+make[3]: Leaving directory `/root/cs161/src/testbin/tail'
+(cd tictac && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/tictac'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c tictac.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   tictac.o   -lc \
+   -o tictac
+make[3]: Leaving directory `/root/cs161/src/testbin/tictac'
+(cd triplehuge && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/triplehuge'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c triplehuge.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c triple.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   triplehuge.o triple.o   -lc \
+   -o triplehuge
+make[3]: Leaving directory `/root/cs161/src/testbin/triplehuge'
+(cd triplemat && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/triplemat'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c triplemat.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c triple.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   triplemat.o triple.o   -lc \
+   -o triplemat
+make[3]: Leaving directory `/root/cs161/src/testbin/triplemat'
+(cd triplesort && make all)
+make[3]: Entering directory `/root/cs161/src/testbin/triplesort'
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c triplesort.c
+cs161-gcc  -nostdinc -I/root/cs161/root/include  -mno-abicalls -fno-pic -Wall -W -Wwrite-strings -O2 -c triple.c
+cs161-gcc -nostdlib -L/root/cs161/root/lib /root/cs161/root/lib/crt0.o   triplesort.o triple.o   -lc \
+   -o triplesort
+make[3]: Leaving directory `/root/cs161/src/testbin/triplesort'
+make[2]: Leaving directory `/root/cs161/src/testbin'
+(cd bin && make install)
+make[2]: Entering directory `/root/cs161/src/bin'
+(cd true && make install)
+make[3]: Entering directory `/root/cs161/src/bin/true'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp true /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/true'
+(cd false && make install)
+make[3]: Entering directory `/root/cs161/src/bin/false'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp false /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/false'
+(cd sync && make install)
+make[3]: Entering directory `/root/cs161/src/bin/sync'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp sync /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/sync'
+(cd mkdir && make install)
+make[3]: Entering directory `/root/cs161/src/bin/mkdir'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp mkdir /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/mkdir'
+(cd rmdir && make install)
+make[3]: Entering directory `/root/cs161/src/bin/rmdir'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp rmdir /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/rmdir'
+(cd pwd && make install)
+make[3]: Entering directory `/root/cs161/src/bin/pwd'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp pwd /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/pwd'
+(cd cat && make install)
+make[3]: Entering directory `/root/cs161/src/bin/cat'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp cat /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/cat'
+(cd cp && make install)
+make[3]: Entering directory `/root/cs161/src/bin/cp'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp cp /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/cp'
+(cd ln && make install)
+make[3]: Entering directory `/root/cs161/src/bin/ln'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp ln /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/ln'
+(cd mv && make install)
+make[3]: Entering directory `/root/cs161/src/bin/mv'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp mv /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/mv'
+(cd rm && make install)
+make[3]: Entering directory `/root/cs161/src/bin/rm'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp rm /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/rm'
+(cd ls && make install)
+make[3]: Entering directory `/root/cs161/src/bin/ls'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp ls /root/cs161/root/bin
+make[3]: Leaving directory `/root/cs161/src/bin/ls'
+(cd sh && make install)
+make[3]: Entering directory `/root/cs161/src/bin/sh'
+[ -d /root/cs161/root/bin ] || mkdir /root/cs161/root/bin
+cp sh /root/cs161/root/bin
+[ -d /root/cs161/root/hostbin ] || mkdir /root/cs161/root/hostbin
+cp host-sh /root/cs161/root/hostbin
+make[3]: Leaving directory `/root/cs161/src/bin/sh'
+make[2]: Leaving directory `/root/cs161/src/bin'
+(cd sbin && make install)
+make[2]: Entering directory `/root/cs161/src/sbin'
+(cd reboot && make install)
+make[3]: Entering directory `/root/cs161/src/sbin/reboot'
+[ -d /root/cs161/root/sbin ] || mkdir /root/cs161/root/sbin
+cp reboot /root/cs161/root/sbin
+make[3]: Leaving directory `/root/cs161/src/sbin/reboot'
+(cd halt && make install)
+make[3]: Entering directory `/root/cs161/src/sbin/halt'
+[ -d /root/cs161/root/sbin ] || mkdir /root/cs161/root/sbin
+cp halt /root/cs161/root/sbin
+make[3]: Leaving directory `/root/cs161/src/sbin/halt'
+(cd poweroff && make install)
+make[3]: Entering directory `/root/cs161/src/sbin/poweroff'
+[ -d /root/cs161/root/sbin ] || mkdir /root/cs161/root/sbin
+cp poweroff /root/cs161/root/sbin
+make[3]: Leaving directory `/root/cs161/src/sbin/poweroff'
+(cd mksfs && make install)
+make[3]: Entering directory `/root/cs161/src/sbin/mksfs'
+[ -d /root/cs161/root/sbin ] || mkdir /root/cs161/root/sbin
+cp mksfs /root/cs161/root/sbin
+[ -d /root/cs161/root/hostbin ] || mkdir /root/cs161/root/hostbin
+cp host-mksfs /root/cs161/root/hostbin
+make[3]: Leaving directory `/root/cs161/src/sbin/mksfs'
+(cd dumpsfs && make install)
+make[3]: Entering directory `/root/cs161/src/sbin/dumpsfs'
+[ -d /root/cs161/root/sbin ] || mkdir /root/cs161/root/sbin
+cp dumpsfs /root/cs161/root/sbin
+[ -d /root/cs161/root/hostbin ] || mkdir /root/cs161/root/hostbin
+cp host-dumpsfs /root/cs161/root/hostbin
+make[3]: Leaving directory `/root/cs161/src/sbin/dumpsfs'
+make[2]: Leaving directory `/root/cs161/src/sbin'
+(cd testbin && make install)
+make[2]: Entering directory `/root/cs161/src/testbin'
+(cd add && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/add'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp add /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/add'
+(cd argtest && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/argtest'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp argtest /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/argtest'
+(cd badcall && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/badcall'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp badcall /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/badcall'
+(cd bigfile && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/bigfile'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp bigfile /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/bigfile'
+(cd conman && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/conman'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp conman /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/conman'
+(cd crash && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/crash'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp crash /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/crash'
+(cd ctest && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/ctest'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp ctest /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/ctest'
+(cd dirconc && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/dirconc'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp dirconc /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/dirconc'
+(cd dirseek && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/dirseek'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp dirseek /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/dirseek'
+(cd dirtest && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/dirtest'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp dirtest /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/dirtest'
+(cd f_test && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/f_test'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp f_test /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/f_test'
+(cd farm && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/farm'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp farm /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/farm'
+(cd faulter && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/faulter'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp faulter /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/faulter'
+(cd filetest && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/filetest'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp filetest /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/filetest'
+(cd forkbomb && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/forkbomb'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp forkbomb /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/forkbomb'
+(cd forktest && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/forktest'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp forktest /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/forktest'
+(cd guzzle && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/guzzle'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp guzzle /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/guzzle'
+(cd hash && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/hash'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp hash /root/cs161/root/testbin
+[ -d /root/cs161/root/hostbin ] || mkdir /root/cs161/root/hostbin
+cp host-hash /root/cs161/root/hostbin
+make[3]: Leaving directory `/root/cs161/src/testbin/hash'
+(cd hog && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/hog'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp hog /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/hog'
+(cd huge && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/huge'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp huge /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/huge'
+(cd kitchen && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/kitchen'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp kitchen /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/kitchen'
+(cd matmult && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/matmult'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp matmult /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/matmult'
+(cd palin && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/palin'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp palin /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/palin'
+(cd parallelvm && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/parallelvm'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp parallelvm /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/parallelvm'
+(cd randcall && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/randcall'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp randcall /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/randcall'
+(cd rmdirtest && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/rmdirtest'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp rmdirtest /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/rmdirtest'
+(cd rmtest && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/rmtest'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp rmtest /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/rmtest'
+(cd sink && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/sink'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp sink /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/sink'
+(cd sort && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/sort'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp sort /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/sort'
+(cd sty && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/sty'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp sty /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/sty'
+(cd tail && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/tail'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp tail /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/tail'
+(cd tictac && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/tictac'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp tictac /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/tictac'
+(cd triplehuge && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/triplehuge'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp triplehuge /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/triplehuge'
+(cd triplemat && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/triplemat'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp triplemat /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/triplemat'
+(cd triplesort && make install)
+make[3]: Entering directory `/root/cs161/src/testbin/triplesort'
+[ -d /root/cs161/root/testbin ] || mkdir /root/cs161/root/testbin
+cp triplesort /root/cs161/root/testbin
+make[3]: Leaving directory `/root/cs161/src/testbin/triplesort'
+make[2]: Leaving directory `/root/cs161/src/testbin'
+(cd man && make install)
+make[2]: Entering directory `/root/cs161/src/man'
+(cd toplevel && make install)
+make[3]: Entering directory `/root/cs161/src/man/toplevel'
+[ -d /root/cs161/root/man ] || mkdir /root/cs161/root/man
+chmod a+rx /root/cs161/root/man
+cp *.html /root/cs161/root/man
+chmod a+r /root/cs161/root/man/*.html
+make[3]: Leaving directory `/root/cs161/src/man/toplevel'
+(cd bin && make install)
+make[3]: Entering directory `/root/cs161/src/man/bin'
+[ -d /root/cs161/root/man/bin ] || mkdir /root/cs161/root/man/bin
+chmod a+rx /root/cs161/root/man/bin
+cp *.html /root/cs161/root/man/bin
+chmod a+r /root/cs161/root/man/bin/*.html
+make[3]: Leaving directory `/root/cs161/src/man/bin'
+(cd sbin && make install)
+make[3]: Entering directory `/root/cs161/src/man/sbin'
+[ -d /root/cs161/root/man/sbin ] || mkdir /root/cs161/root/man/sbin
+chmod a+rx /root/cs161/root/man/sbin
+cp *.html /root/cs161/root/man/sbin
+chmod a+r /root/cs161/root/man/sbin/*.html
+make[3]: Leaving directory `/root/cs161/src/man/sbin'
+(cd testbin && make install)
+make[3]: Entering directory `/root/cs161/src/man/testbin'
+[ -d /root/cs161/root/man/testbin ] || mkdir /root/cs161/root/man/testbin
+chmod a+rx /root/cs161/root/man/testbin
+cp *.html /root/cs161/root/man/testbin
+chmod a+r /root/cs161/root/man/testbin/*.html
+make[3]: Leaving directory `/root/cs161/src/man/testbin'
+(cd libc && make install)
+make[3]: Entering directory `/root/cs161/src/man/libc'
+[ -d /root/cs161/root/man/libc ] || mkdir /root/cs161/root/man/libc
+chmod a+rx /root/cs161/root/man/libc
+cp *.html /root/cs161/root/man/libc
+chmod a+r /root/cs161/root/man/libc/*.html
+make[3]: Leaving directory `/root/cs161/src/man/libc'
+(cd syscall && make install)
+make[3]: Entering directory `/root/cs161/src/man/syscall'
+[ -d /root/cs161/root/man/syscall ] || mkdir /root/cs161/root/man/syscall
+chmod a+rx /root/cs161/root/man/syscall
+cp *.html /root/cs161/root/man/syscall
+chmod a+r /root/cs161/root/man/syscall/*.html
+make[3]: Leaving directory `/root/cs161/src/man/syscall'
+(cd dev && make install)
+make[3]: Entering directory `/root/cs161/src/man/dev'
+[ -d /root/cs161/root/man/dev ] || mkdir /root/cs161/root/man/dev
+chmod a+rx /root/cs161/root/man/dev
+cp *.html /root/cs161/root/man/dev
+chmod a+r /root/cs161/root/man/dev/*.html
+make[3]: Leaving directory `/root/cs161/src/man/dev'
+(cd misc && make install)
+make[3]: Entering directory `/root/cs161/src/man/misc'
+[ -d /root/cs161/root/man/misc ] || mkdir /root/cs161/root/man/misc
+chmod a+rx /root/cs161/root/man/misc
+cp *.html /root/cs161/root/man/misc
+chmod a+r /root/cs161/root/man/misc/*.html
+make[3]: Leaving directory `/root/cs161/src/man/misc'
+make[2]: Leaving directory `/root/cs161/src/man'
+(cd kern && make)
+make[2]: Entering directory `/root/cs161/src/kern'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/cs161/src/kern'
+(cd kern && make install)
+make[2]: Entering directory `/root/cs161/src/kern'
+make[2]: Nothing to be done for `install'.
+make[2]: Leaving directory `/root/cs161/src/kern'
+make[1]: Leaving directory `/root/cs161/src'
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# mv r[Ktypescript ~/cs161/po[Kroj/proj2/build.script
+mv: cannot stat ‘typescript’: No such file or directory
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# cd ..
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# cd ..mv typescript ~/cs161/proj/proj2/build.script [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C. ~/cs161/proj/proj2/build.scriptt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs ~/cs161/proj/proj2/build.script[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc ~/cs161/proj/proj2/build.script[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr ~/cs161/proj/proj2/build.script[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci ~/cs161/proj/proj2/build.script[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp ~/cs161/proj/proj2/build.script[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct ~/cs161/proj/proj2/build.script[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# exit
+exit
+
+Script done on Tue 30 Aug 2016 02:25:39 PM CDT

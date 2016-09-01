@@ -1,0 +1,108 @@
+Script started on Thu 01 Sep 2016 02:52:06 PM CDT
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[?1034h[root@localhost cs161]# cvs diff -c kern/main/main.c
+cvs diff: No CVSROOT specified!  Please use the `-d' option
+cvs [diff aborted]: or set the CVSROOT environment variable.
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# exportr[K CVSROOT=~/cs161/cvsroot
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# export CVSROOT=~/cs161/cvsroot[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pcvs diff -c kern/main/main.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10P./sys161 -w kernelcvs diff -c kern/main/main.c
+cvs [diff aborted]: no such directory `kern/main'
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# cvs diff -c kern/main/main.c~kern/main/main.c/kern/main/main.c[C[1P/kern/main/main.c[1Pkern/main/main.c[1Pern/main/main.c[1Prn/main/main.c[1Pn/main/main.c[1P/main/main.c[1Pmain/main.c[1Pain/main.c[1Pin/main.c[1Pn/main.c[1P/main.c[1Pmain.c[1Pain.c[1Pin.c[1Pn.c[1P.c[1Pc[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+[0m[38;5;27mbin[0m                     [38;5;9mcs161-gdb-1.5.tgz[0m  [38;5;27msrc[0m
+[38;5;27mcs161-binutils-1.4[0m      [38;5;27mcvsroot[0m            [38;5;27msys161-1.14[0m
+[38;5;9mcs161-binutils-1.4.tar[0m  cvs-use.script     [38;5;9msys161-1.14.tar.gz[0m
+[38;5;27mcs161-gcc-1.5[0m           [38;5;9mos161-1.10.tar.gz[0m  [38;5;27mtools[0m
+[38;5;9mcs161-gcc-1.5.tgz[0m       [38;5;27mproj[0m
+[38;5;27mcs161-gdb-1.5[0m           [38;5;27mroot[0m
+]0;root@localhost:~/cs161]7;file://localhost.localdomain/root/cs161[root@localhost cs161]# cd src
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# ;s[K[Kls
+[0m[38;5;27mbin[0m        COPYING  defs.mk.sample  [38;5;27mlib[0m       [38;5;27mmk[0m
+CHANGES    [38;5;27mCVS[0m      [38;5;27minclude[0m         Makefile  [38;5;27msbin[0m
+[38;5;34mconfigure[0m  defs.mk  [38;5;27mkern[0m            [38;5;27mman[0m       [38;5;27mtestbin[0m
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# lscd src[4Plscvs diff -c kern/main/main.c
+Index: kern/main/main.c
+===================================================================
+RCS file: /root/cs161/cvsroot/src/kern/main/main.c,v
+retrieving revision 1.1.1.1
+diff -c -r1.1.1.1 main.c
+*** kern/main/main.c	30 Aug 2016 00:52:40 -0000	1.1.1.1
+--- kern/main/main.c	1 Sep 2016 19:52:34 -0000
+***************
+*** 1,7 ****
+  /*
+   * Main.
+   */
+! 
+  #include <types.h>
+  #include <kern/errno.h>
+  #include <kern/unistd.h>
+--- 1,7 ----
+  /*
+   * Main.
+   */
+! //Bhanu Sharma
+  #include <types.h>
+  #include <kern/errno.h>
+  #include <kern/unistd.h>
+***************
+*** 16,21 ****
+--- 16,22 ----
+  #include <vm.h>
+  #include <syscall.h>
+  #include <version.h>
++ #include "hello.h"
+  
+  /*
+   * These two pieces of data are maintained by the makefiles and build system.
+***************
+*** 60,67 ****
+  	 * anything at all. You can make it larger though (it's in
+  	 * dev/generic/console.c).
+  	 */
+! 
+! 	kprintf("\n");
+  	kprintf("OS/161 base system version %s\n", BASE_VERSION);
+  	kprintf("%s", harvard_copyright);
+  	kprintf("\n");
+--- 61,69 ----
+  	 * anything at all. You can make it larger though (it's in
+  	 * dev/generic/console.c).
+  	 */
+!   
+! 	//hello();
+!         kprintf("\n");
+  	kprintf("OS/161 base system version %s\n", BASE_VERSION);
+  	kprintf("%s", harvard_copyright);
+  	kprintf("\n");
+***************
+*** 87,92 ****
+--- 89,96 ----
+  	 */
+  	assert(sizeof(userptr_t)==sizeof(char *));
+  	assert(sizeof(*(userptr_t)0)==sizeof(char));
++ 
++ 	
+  }
+  
+  /*
+***************
+*** 159,165 ****
+  kmain(char *arguments)
+  {
+  	boot();
+! 
+  	menu(arguments);
+  
+  	/* Should not get here */
+--- 163,169 ----
+  kmain(char *arguments)
+  {
+  	boot();
+! 	kprintf("Hello World!");
+  	menu(arguments);
+  
+  	/* Should not get here */
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# cvs commit
+cvs [commit aborted]: 'root' is not allowed to commit files
+]0;root@localhost:~/cs161/src]7;file://localhost.localdomain/root/cs161/src[root@localhost src]# exit
+exit
+
+Script done on Thu 01 Sep 2016 03:02:09 PM CDT

@@ -1,0 +1,26 @@
+1) 0xfffff000
+2) LAMEbus
+3) splhigh - sets spl to highest value, disabling all interrupts
+   spl0 - sets spl to 0, enabling all interrupts
+4) u_int32_t is unsigned 32 bits. int is signed 32 bits.
+   u_int32_t will be able to store larger positive numbers.
+5) It returns the old interrupt state.
+6) Traditionally spl_high = 15
+7) 100
+8) d_open, d_close, d_io, d_ioctl
+9) 32
+10) 15
+11) fs_sync, fs_getvolname, fs_getroot, fs_unmount
+12) void thread_sleep (const void *addr);
+13) 32 bits
+14) (vop_ for all of these) open, close, reclaim, read, readlink, getdirentry, write, ioctl, stat, gettype, tryseek, fsync, mmap, truncate, namefile, creat, symlink, mkdir, link, remove, rmdir, rename, lookup, lookparent
+15) 1024
+16) 8
+17) kern/include/kern/unistd.h
+18) Yes. First, the scheduler bootstrap creates the run queue. Then, the thread bootstrap initializes the first thread.
+19) Zombies are threads/processes that have exited but not been fully deleted yet.
+20) runqueue = q_create(32); 
+21) always device:, such as ser:
+22) name with raw added to the end, such as lhd0raw
+23) vn_countlock
+24) Block devices and character devices
